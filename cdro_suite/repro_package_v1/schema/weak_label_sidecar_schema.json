@@ -1,0 +1,86 @@
+{
+  "keys": [
+    "weak_label",
+    "posterior",
+    "uncertainty",
+    "agreement",
+    "num_votes",
+    "view_votes",
+    "view_probs",
+    "flow_mask",
+    "window_idx",
+    "ip_idx",
+    "rho_proxy",
+    "window_rate_share",
+    "camouflage_proxy",
+    "congestion_proxy",
+    "strategy_proxy",
+    "feature_index",
+    "view_names",
+    "scenario_tags",
+    "config"
+  ],
+  "shapes": {
+    "weak_label": [
+      4698
+    ],
+    "posterior": [
+      4698,
+      2
+    ],
+    "uncertainty": [
+      4698
+    ],
+    "agreement": [
+      4698
+    ],
+    "num_votes": [
+      4698
+    ],
+    "view_votes": [
+      4698,
+      5
+    ],
+    "view_probs": [
+      4698,
+      5
+    ],
+    "flow_mask": [
+      4698
+    ],
+    "window_idx": [
+      4698
+    ],
+    "ip_idx": [
+      4698
+    ],
+    "rho_proxy": [
+      4698
+    ],
+    "window_rate_share": [
+      4698
+    ],
+    "camouflage_proxy": [
+      4698
+    ],
+    "congestion_proxy": [
+      4698
+    ],
+    "strategy_proxy": [
+      4698
+    ]
+  },
+  "view_names": [
+    "rate_view",
+    "entropy_view",
+    "port_view",
+    "latency_view",
+    "physics_view"
+  ],
+  "scenario_tags": {
+    "topology_type": "three_tier",
+    "load_profile": "high",
+    "bot_type_mode": "mixed",
+    "bot_role_types": "burst,mimic,slowburn"
+  }
+}

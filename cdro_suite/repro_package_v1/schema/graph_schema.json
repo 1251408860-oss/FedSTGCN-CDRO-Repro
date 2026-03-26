@@ -1,0 +1,41 @@
+{
+  "num_nodes": 5976,
+  "x_shape": [
+    5976,
+    7
+  ],
+  "edge_index_shape": [
+    2,
+    8142
+  ],
+  "edge_type_shape": [
+    8142
+  ],
+  "required_fields": [
+    "x",
+    "y",
+    "edge_index",
+    "edge_type",
+    "train_mask",
+    "val_mask",
+    "test_mask",
+    "temporal_test_mask",
+    "window_idx",
+    "ip_idx",
+    "source_ips",
+    "weak_label",
+    "weak_posterior",
+    "weak_agreement",
+    "weak_uncertainty",
+    "rho_proxy"
+  ],
+  "feature_index": {
+    "ln(N+1)": 0,
+    "ln(T+1)": 1,
+    "entropy": 2,
+    "D_observed": 3,
+    "pkt_rate": 4,
+    "avg_pkt_size": 5,
+    "port_diversity": 6
+  }
+}

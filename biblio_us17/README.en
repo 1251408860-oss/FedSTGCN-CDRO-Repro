@@ -1,0 +1,284 @@
+# 
+# Dataset Biblio-US17
+#
+# Labeled HTTP requests dataset
+#
+# Cybersecurity Lab - Network Eng. Research Group - TIC154
+# https://dtstc.ugr.es/neus-cslab/recursos/ds-biblio/
+
+
+GENERAL INFORMATION
+------------------
+
+1. Dataset title:	Labeled HTTP requests dataset: Dataset Biblio-US17
+
+
+2. Authorship:
+
+	Name:		Jesús E. Díaz-Verdejo
+	Institution:	University of Granada (Dpt. Signal Theory, Telematics and Communications - CITIC)
+	Email:		jedv@ugr.es
+	ORCID:		0000-0002-8424-9932
+
+
+	Name:		Rafael Estepa Alonso
+	Institution:	University of Seville (Dpt. Telematics Engineering)
+	Email:		rafaestepa@us.es
+	ORCID:  	0000-0001-8505-1920
+
+
+	Name:		Antonio Estepa Alonso
+	Institution:	University of Seville (Dpt. Telematics Engineering)
+	Email:		aestepa@us.es
+	ORCID:  	0000-0003-1841-3973
+
+
+	Name:		Javier Muñoz-Calle
+	Institution:	University of Seville (Dpt. Telematics Engineering)
+	Email:		fjmc@us.es
+	ORCID:  	0000-0001-8146-8438
+
+
+	Name:		German Madinabeitia Luque
+	Institution:	University of Seville (Dpt. Telematics Engineering)
+	Email:		german@us.es
+	ORCID:		0000-0001-6376-4620
+
+
+
+
+DESCRIPTION
+----------
+
+1. Dataset language: English
+
+2. Abstract:
+
+This dataset contains a set of anonymized and labeled HTTP requests (selected fields) from the logs of a real-in-production web server at the library of the University of Seville during 6.5 months in 2017.
+
+The dataset has been sanitized using a supervised methodology as proposed in:
+
+Díaz-Verdejo, Jesús E.; Estepa, Antonio; Estepa, Rafael; Madinabeitia, German; Muñoz-Calle, Javier, "A methodology for conducting efficient sanitization of HTTP training datasets", Future Generation Computer Systems, vol. 109, pp. 67-82, 2020. https://doi.org/10.1016/j.future.2020.03.033.
+
+
+3. Keywords: anomaly based intrusion detection; data acquisition; training datasets
+
+4. Date of data collection: 01-01-2017 to 17-07-2017
+
+5. Publication Date: 25/07/2023
+
+6. Grant information:
+
+	Grant Agency:	University of Seville
+	Grant Number:	PI-1736/22/2017
+
+	Grant Agency:	European Regional Development Fund (FEDER) and Regional Government of Andalusia (Junta de Andalucía)
+	Grant Number:	A-TIC-224-UGR20
+
+	Grant Agency:	Ministry of Science and Innovation
+	Grant Number:	PID2020-115199RB-I00
+
+	Grant Agency:	European Regional Development Fund (FEDER) and Regional Government of Andalusia (Junta de Andalucía)
+	Grant Number:	PYC20-RE-087-USE
+
+
+
+7. Geographical location/s of data collection: Web servers of the library of the University of Seville
+
+
+
+ACCESS INFORMATION
+------------------
+
+1. Creative Commons License of the dataset: BY-NC-ND 4.0
+
+2. Usage Conditions: This dataset can be freely used for research purposes under the condition that the following papers must be cited:
+
+Díaz-Verdejo, Jesús E.; Estepa, Antonio; Estepa, Rafael; Madinabeitia, German; Muñoz-Calle, Javier, "A methodology for conducting efficient sanitization of HTTP training datasets", Future Generation Computer Systems, vol. 109, pp. 67-82, 2020. https://doi.org/10.1016/j.future.2020.03.033.
+
+Díaz-Verdejo, Jesús E.; Estepa, Rafael; Estepa, Antonio; Muñoz-Calle, Javier; Madinabeitia, German; "Biblio-US17: A large real and labeled URI dataset for website modelling towards anomaly-based intrusion detection systems" [DOI Pending]
+
+
+3. Dataset DOI: https://doi.org/10.12795/11441/148254
+
+4. Related publication:
+
+Díaz-Verdejo, Jesús E.; Estepa, Rafael; Estepa, Antonio; Muñoz-Calle, Javier; Madinabeitia, German; "Biblio-US17: A large real and labeled URI dataset for website modelling towards anomaly-based intrusion detection systems" [DOI Pending]
+
+
+
+
+DATASET PRESENTATION AND ORGANIZATION
+-------------------------------------
+The dataset is organized in a tree structure (subdirectories) each containing different types of files or sets. As provided, 5 sets of files and two partitioning schemes are considered. The partition files are not directly provided but can be generated from the files using the provided script. 
+
+The following sets of files (subdirs) are included:
+
+  - RAW files: Initial registers (obtained after preprocessing and anonymization of real captured files). 
+  - LABEL files: Labels assigned during analysis.
+  - CLEAN files: Registers considered as clean after sanitization. This is the full dataset to be used as normal traffic.
+  - SID files: Information about SIDs triggered by used SIDS tools.
+  - ATTACK files: Registers classified as attack (only LVL1 -indubious- attacks).
+
+Registers in each set are organized in daily bins (files) named as biblio-2017-<mm>-<dd>.<ext>, being <mm> the number of the month, <dd> the day and <ext> an extension related to the type of content:
+	- .raw for RAW files
+	- .lbl for LBL files
+	- .cl for CLEAN files
+	- .sid for SID files
+	- .att for ATTACK files
+
+REGISTERS' INDEXING
+-------------------
+For indexing purposes, each register (request) in the original captured log file has been assigned an identifier as '[MM-DD-Fnnnnnn]', where MM and DD stand, respectively, for the month (number) and day, F is related to the protocol (A for HTTP - S for HTTPS) and nnnnnn is a 6 digit order number for the given day. 
+
+Each register in every file contains the identifier of the original request.  
+
+REGISTERS' FORMATS
+------------------
+Each file contains registers as a set of tab delimited fields. Each register expands a single line and always start by an identifier. The contained fields are dependent on the type of register:
+ 
+ - RAW, CLEAN and ATTACK: Each line corresponds to a request with the following fields:
+		IDENTIFIER METHOD URI PROTOCOL» RESP_CODE RESP_SIZE
+
+	Register example:
+		[02-18-A001234] GET /2003/padron.html HTTP/1.1″ 200 11800
+
+ - LABEL: Each line corresponds to a set of labels, if any, assigned to the request identified by the identifier. 
+		IDENTIFIER	IL_M2 	IL_NEM 	MS_PL1 	MS_PL2 	ManualTP 	Phase2TP 	OOS
+
+			- IL_M2, IL_NEM, MS_PL1 and MS_PL2 contain a value 1 (True) if the corresponding SIDS triggers an alert (M2: snort, Nem: Nemesida, MS_PLx: Modsecurity with paranoia level X). Otherwise, its value is 0.
+			- ManualTP and Phase2TP shows the label manually assigned during supervision and OOS contains information related to Out-of-Specification, as:
+
+        +------------------+-------------------------------------------------------+---------------------+--------------------------------+
+        |                  | S1: SIDS detection                                    | S2: SID supervision | S3: Vocabulary inps.           |
+        +----------------- +-------------+-------------+-------------+-------------+---------------------+------------------+-------------+
+        | IDENTIFIER       | IL_M2       | IL_NEM      | MS_PL1      | MS_PL2      | ManualTP            | Phase2TP         | OOS         |
+        +----------------- +-------------+-------------+-------------+-------------+---------------------+------------------+-------------+
+        | [MM-DD-Fnnnnnn]  | 0 – No det. | 0 – No det. | 0 – No det. | 0 – No det. | -1 – Not labeled    | -1 – Not labeled | 0 – Normal  |
+        |                  | 1 – Detect. | 1 – Detect. | 1 – Detect. | 1 – Detect. |  0 – False Positive |  1 – Attack LVL1 | 1 – OOS RFC |
+        |                  |             |             |             |             |  1 – Attack LVL1    |  2 – Attack LVL2 | 2 - OOS Cod |
+        |                  |             |             |             |             |  2 – Attack LVL2    |  3 – Attack LVL3 | 3 – OOS Fmt |
+        |                  |             |             |             |             |                     |  4 – Attack LVL4 | 4 – OOS Sem |
+        +----------------- +-------------+-------------+-------------+-------------+---------------------+------------------+-------------+
+
+		Values assigned for attack levels and OOS codes are:
+        +--------------------------++----------------------------------------------+
+        | ATTACK                   || OOS                                          |
+        | VALUE - Desc.            || Label - Desc.                                |
+        +--------------------------++----------------------------------------------+
+        | 1 - Indubious            || 1 - Non RFC 3296 compliance                  |
+        | 2 - Context dependent    || 2 - Extended cod. errors / Not allowed chars | 
+        | 3 - Percent encoding at. || 3 - Ill-formatted URI (‘//’)                 |
+        | 4 - DoS                  || 4 - Others / semantic errors                 |
+        +--------------------------++----------------------------------------------+
+
+	Register example:
+		[02-18-A001234] 	0 	1 	0 	1 	0 	-1 	2
+
+		It must be noted that registers with default values (e.g. 0 0 0 0 -1 -1 0) are not included in the label files.
+
+ - SID: Each line contains information about a single triggered alert. The format is:
+		IDENTIFIER SID DET
+
+	where SID is the signature identifier for the activated alert and DET is the code for the detector, as:
+	
+        +-----+-------------+-------------------+-------------+---------------------------------------------------------------+
+        | DET | Detector    | Rules             | Date        | SID Observations                                              |
+        +-----+-------------+-------------------+-------------+---------------------------------------------------------------+
+        |   1 | Snort       | Talos+ETOpen      | March, 2022 | Sids numbers 1024-899999 (Talos) and 2000000-2999999 (ETOpen) |
+        |   2 |	Nemesida    | Nemesida (public) | Nov. 2021   |	Sids originales renumerados > 3000000                         |
+        |   3 | ModSecurity | CRS3.3.2 (PL1)    | Apr. 2022   | Sids 900000-999999                                            |
+        |   4 |	ModSecurity | CRS3.3.2 (PL2)    | Apr. 2022   | Sids 900000-999999                                            |
+        +-----+-------------+-------------------+-------------+---------------------------------------------------------------+
+ 
+PARTITIONING
+------------
+
+Two partitioning schemes are considered: TI (time independent) and TD (time dependent). For each scheme, a 60/30/10 distribution of the registers is set in training/testing/validation.
+
+To generate the partition subsets, the script 'partitions.sh' provided in /bin subdir must be run (from /bin directory).
+As a result, the following subdirs should be generated
+     /partitions/
+                |-> /ti/ 
+                       |-> calib
+                       |-> test
+                       |-> tr
+                       |-> val
+                |-> /td/
+                       |-> test
+                       |-> tr
+                       |-> val
+
+TI partition contains registers organized in daily files.
+TD partition is organized in 7 bins numbered from 1 to 7.
+
+
+FURTHER DETAILS
+---------------
+
+Additional details are provided in the following resources:
+	- Díaz-Verdejo, Jesús E.; Estepa, Rafael; Estepa, Antonio; Muñoz-Calle, Javier; Madinabeitia, German; "Biblio-US17: A large real and labeled URI dataset for website modelling towards anomaly-based intrusion detection systems". [DOI pending]
+	- https://dtstc.ugr.es/neus-cslab/resources/ds-biblio/
+
+
+
+DATASET CONTENT - STATISTICS
+---------------------------
+   
+The number of files & registers in each set is:
+
+        +--------+--------+------------+
+        | SET    | #files | #registers |
+        +--------+--------+------------+
+        | RAW    |    198 | 47 402 907 |
+        | LABELS |    198 |    370 859 |
+        | SID    |    198 |    344 942 |
+        | CLEAN  |    198 | 42 473 128 |
+        | ATTACK |    198 |    327 906 |
+        +--------+--------+------------+
+
+Distribution of labels over all registers in RAW and those considered after filtering (CR<300):
+
+        +---------+-------+---------+--------+
+        | Class   | LABEL | RAW     | CR<300 |
+        +---------+-------+---------+--------+
+        | Attacks | LVL1  | 327 906 |  1 148 |
+        |         | LVL2  |  10 634 |    617 |
+        |         | LVL3  |   5 515 |  3 442 |
+        |         | LVL4  |   4 310 |      0 |
+        |         +-------+---------+--------+ 
+        |         | TOTAL |	348 365 |  5 207 |
+        +---------+-------+---------+--------+
+        | FP      | FP    |   9 222 |  8 184 |
+        +---------+-------+---------+--------+
+        | OOS     | OOS1  |     169 |     98 |
+        |         | OOS2  |   2 021 |  1 735 | 
+        |         | OOS3  |   6 567 |  6 178 |
+        |         | OOS4  |   1 595 |  1 106 |
+        |         +-------+---------+--------+ 
+        |         | TOTAL |  10 352 |  9 117 |
+        +---------+-------+---------+--------+
+
+Partitions:
+
+        +----+-------+-------+------------+
+        | P  | PART  | files | Registers  |
+        +----+-------+-------+------------+
+        | TI | TR    |   198 | 25 483 092 |
+        |    | TEST  |   198 | 12 741 546 |
+        |    | VAL   |   198 |  4 248 490 |
+        |    | CALIB |    93 |  6 095 083 |
+        +----+-------+-------+------------+
+
+        +----+------+------------+-----------+-----------+
+        | TD | PART | TR         | TEST      | VAL       |
+        +----+------+------------+-----------+-----------+
+        |    |    1 | 12 437 152 | 8 270 214 | 2 535 297 |
+        |    |    2 | 13 638 751 | 7 000 209 | 3 588 483 |
+        |    |    3 | 14 612 283 | 6 123 780 | 2 811 780 |
+        |    |    4 | 13 849 043 | 6 400 263 | 4 762 313 |
+        |    |    5 | 14 393 994 | 7 574 093 | 3 454 446 |
+        |    |    6 | 13 400 472 | 8 216 759 | 2 668 271 |
+        |    |    7 | 13 697 873 | 6 122 717 | 1 945 172 |
+        +----+------+------------+-----------+-----------+
+

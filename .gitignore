@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.DS_Store
+Thumbs.db
+
+# Keep the public repo lightweight.
+*.pt
+*.pcap
+*.log
+
+# Local environments
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/

@@ -1,0 +1,24 @@
+{
+  "suite_summary": "/home/user/FedSTGCN/cdro_suite/main_baselineplus_s3_v1",
+  "base_graph": "/home/user/FedSTGCN/top_conf_suite_recharge/graphs/scenario_e_three_tier_high2.pt",
+  "manifest_file": "/home/user/FedSTGCN/real_collection/scenario_e_three_tier_high2/arena_manifest_v2.json",
+  "weak_label_dir": "/home/user/FedSTGCN/cdro_suite/main_baselineplus_s3_v1/weak_labels",
+  "protocol_graphs": {
+    "weak_temporal_ood": {
+      "graph_file": "/home/user/FedSTGCN/cdro_suite/main_baselineplus_s3_v1/protocol_graphs/weak_temporal_ood.pt",
+      "summary_file": "/home/user/FedSTGCN/cdro_suite/main_baselineplus_s3_v1/protocol_graphs/weak_temporal_ood_summary.json"
+    },
+    "weak_topology_ood": {
+      "graph_file": "/home/user/FedSTGCN/cdro_suite/main_baselineplus_s3_v1/protocol_graphs/weak_topology_ood.pt",
+      "summary_file": "/home/user/FedSTGCN/cdro_suite/main_baselineplus_s3_v1/protocol_graphs/weak_topology_ood_summary.json"
+    },
+    "weak_attack_strategy_ood": {
+      "graph_file": "/home/user/FedSTGCN/cdro_suite/main_baselineplus_s3_v1/protocol_graphs/weak_attack_strategy_ood.pt",
+      "summary_file": "/home/user/FedSTGCN/cdro_suite/main_baselineplus_s3_v1/protocol_graphs/weak_attack_strategy_ood_summary.json"
+    },
+    "label_prior_shift_ood": {
+      "graph_file": "/home/user/FedSTGCN/cdro_suite/main_baselineplus_s3_v1/protocol_graphs/label_prior_shift_ood.pt",
+      "summary_file": "/home/user/FedSTGCN/cdro_suite/main_baselineplus_s3_v1/protocol_graphs/label_prior_shift_ood_summary.json"
+    }
+  }
+}

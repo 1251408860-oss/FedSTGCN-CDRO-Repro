@@ -1,0 +1,29 @@
+# Strong Noisy-Label Baselines
+
+## Main
+- Noisy-CE: F1=0.8722, FPR=0.1822, ECE=0.1784
+- GCE: F1=0.8682, FPR=0.1637, ECE=0.1806
+- SCE: F1=0.8716, FPR=0.1697, ECE=0.1806
+- Bootstrap-CE: F1=0.8721, FPR=0.1829, ECE=0.1786
+- ELR: F1=0.8730, FPR=0.1703, ECE=0.1892
+- Posterior-CE: F1=0.8548, FPR=0.2203, ECE=0.2010
+- CDRO-Fixed: F1=0.8583, FPR=0.2080, ECE=0.1709
+- CDRO-UG (sw0): F1=0.8661, FPR=0.1834, ECE=0.1951
+- CDRO-UG + PriorCorr: F1=0.8671, FPR=0.1719, ECE=0.1935
+
+- Best non-CDRO baseline by pooled FPR in Main is GCE.
+- CDRO-UG vs GCE: delta_F1=-0.002103, p=0.669514; delta_FPR=+0.019734, p=0.283378.
+
+## Batch2
+- Noisy-CE: F1=0.8876, FPR=0.2695, ECE=0.1714
+- GCE: F1=0.8850, FPR=0.2722, ECE=0.1602
+- SCE: F1=0.8849, FPR=0.2859, ECE=0.1520
+- Bootstrap-CE: F1=0.8872, FPR=0.2707, ECE=0.1692
+- ELR: F1=0.8871, FPR=0.2750, ECE=0.1575
+- Posterior-CE: F1=0.8832, FPR=0.2186, ECE=0.1975
+- CDRO-Fixed: F1=0.8880, FPR=0.2368, ECE=0.2225
+- CDRO-UG (sw0): F1=0.8852, FPR=0.2259, ECE=0.1826
+- CDRO-UG + PriorCorr: F1=0.8815, FPR=0.2410, ECE=0.1700
+
+- Best non-CDRO baseline by pooled FPR in Batch2 is Posterior-CE.
+- CDRO-UG vs Posterior-CE: delta_F1=+0.002084, p=0.345375; delta_FPR=+0.007281, p=0.392726.

@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="860" viewBox="0 0 1400 860">
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L10,3 L0,6 Z" fill="#29465b"/>
+    </marker>
+    <style>
+      .title { font: 700 28px Arial, sans-serif; fill: #183040; }
+      .subtitle { font: 600 18px Arial, sans-serif; fill: #27465b; }
+      .label { font: 600 17px Arial, sans-serif; fill: #1f3442; }
+      .body { font: 15px Arial, sans-serif; fill: #213845; }
+      .small { font: 14px Arial, sans-serif; fill: #355261; }
+      .box { stroke: #284559; stroke-width: 2.2; rx: 16; ry: 16; }
+      .arrow { stroke: #29465b; stroke-width: 3; fill: none; marker-end: url(#arrow); }
+      .dash { stroke-dasharray: 8 7; }
+    </style>
+  </defs>
+
+  <rect x="0" y="0" width="1400" height="860" fill="#f5f8fb"/>
+  <text x="60" y="60" class="title">CDRO-UG as a Trustworthy Detection Pipeline Under Conditional Shift</text>
+
+  <rect x="60" y="100" width="1280" height="380" fill="#eef5fa" class="box"/>
+  <text x="85" y="135" class="subtitle">Training-time pipeline</text>
+
+  <rect x="90" y="170" width="250" height="120" fill="#ffffff" class="box"/>
+  <text x="112" y="205" class="label">Spatiotemporal graph input</text>
+  <text x="112" y="235" class="body">Flow-window nodes</text>
+  <text x="112" y="260" class="body">Temporal and protocol edges</text>
+
+  <rect x="90" y="325" width="250" height="120" fill="#ffffff" class="box"/>
+  <text x="112" y="360" class="label">Weak supervision views</text>
+  <text x="112" y="390" class="body">Heuristic attack views</text>
+  <text x="112" y="415" class="body">Weak benign / abstain evidence</text>
+
+  <rect x="405" y="170" width="290" height="275" fill="#ffffff" class="box"/>
+  <text x="430" y="205" class="label">Weak-label aggregation</text>
+  <text x="430" y="240" class="body">Aggregate posterior  p~_i</text>
+  <text x="430" y="270" class="body">Weak hard label  y~_i</text>
+  <text x="430" y="300" class="body">Uncertainty  u_i</text>
+  <text x="430" y="330" class="body">Agreement / disagreement  a_i, d_i</text>
+  <text x="430" y="360" class="body">Shift-sensitive proxy  rho_i</text>
+  <text x="430" y="405" class="small">This stage converts structured weak evidence into trust- and shift-aware signals.</text>
+
+  <rect x="760" y="170" width="255" height="120" fill="#fffdf6" class="box"/>
+  <text x="785" y="205" class="label">Class-asymmetric trust</text>
+  <text x="785" y="235" class="body">Higher trust for weak attack</text>
+  <text x="785" y="260" class="body">Lower trust for uncertain benign</text>
+
+  <rect x="760" y="325" width="255" height="120" fill="#f8fbf5" class="box"/>
+  <text x="785" y="360" class="label">Conditional group construction</text>
+  <text x="785" y="390" class="body">Groups from u_i and rho_i</text>
+  <text x="785" y="415" class="body">Prioritize conditionally risky regions</text>
+
+  <rect x="1080" y="215" width="220" height="180" fill="#ffffff" class="box"/>
+  <text x="1110" y="250" class="label">CDRO-UG objective</text>
+  <text x="1110" y="285" class="body">Soft targets  q_i</text>
+  <text x="1110" y="315" class="body">Uncertainty-guided weights  w_g</text>
+  <text x="1110" y="345" class="body">Train the locked sw0 detector</text>
+
+  <path d="M340 230 L405 230" class="arrow"/>
+  <path d="M340 385 L405 385" class="arrow"/>
+  <path d="M695 255 L760 255" class="arrow"/>
+  <path d="M695 380 L760 380" class="arrow"/>
+  <path d="M1015 255 L1080 285" class="arrow"/>
+  <path d="M1015 385 L1080 325" class="arrow"/>
+
+  <rect x="60" y="530" width="1280" height="260" fill="#f3f7f3" class="box"/>
+  <text x="85" y="565" class="subtitle">Deployment-time reading</text>
+
+  <rect x="100" y="610" width="255" height="120" fill="#ffffff" class="box"/>
+  <text x="125" y="645" class="label">Source-locked operating point</text>
+  <text x="125" y="675" class="body">Tune threshold on the primary batch</text>
+  <text x="125" y="700" class="body">Freeze threshold before transfer</text>
+
+  <rect x="435" y="610" width="255" height="120" fill="#ffffff" class="box"/>
+  <text x="462" y="645" class="label">Shifted evaluation batch</text>
+  <text x="462" y="675" class="body">External-J and other external captures</text>
+  <text x="462" y="700" class="body">No threshold re-tuning</text>
+
+  <rect x="770" y="610" width="255" height="120" fill="#ffffff" class="box"/>
+  <text x="795" y="645" class="label">Operator-facing readouts</text>
+  <text x="795" y="675" class="body">False-positive rate</text>
+  <text x="795" y="700" class="body">False alerts per run / per 10k benign</text>
+
+  <rect x="1085" y="610" width="220" height="120" fill="#ffffff" class="box"/>
+  <text x="1110" y="645" class="label">Tradeoff report</text>
+  <text x="1110" y="675" class="body">Attack-IP coverage</text>
+  <text x="1110" y="700" class="body">First-alert delay</text>
+
+  <path d="M1200 395 L1200 560" class="arrow dash"/>
+  <path d="M355 670 L435 670" class="arrow"/>
+  <path d="M690 670 L770 670" class="arrow"/>
+  <path d="M1025 670 L1085 670" class="arrow"/>
+
+  <text x="92" y="805" class="small">Recommended manuscript reading: Figure 1 defines the system and deployment problem; Table 1 and Figure 2 report the scoped external-shift gain; Table 2 translates that gain into alert burden; Figures 3-4 explain why the gain appears.</text>
+</svg>

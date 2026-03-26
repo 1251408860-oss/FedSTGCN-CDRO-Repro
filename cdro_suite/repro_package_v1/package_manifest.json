@@ -1,0 +1,24 @@
+{
+  "schemas": [
+    "schema/graph_schema.json",
+    "schema/graph_schema.md",
+    "schema/weak_label_sidecar_schema.json",
+    "schema/weak_label_sidecar_format.md"
+  ],
+  "protocol_split_manifests": [
+    "protocol_split_manifests/main_protocol_splits.json",
+    "protocol_split_manifests/external_j_protocol_splits.json"
+  ],
+  "scripts": [
+    "run_analyst_case_studies.sh",
+    "run_attack_family_breakdown.sh",
+    "run_deployment_checks.sh",
+    "run_label_budget.sh",
+    "run_non_graph_clean.sh",
+    "run_public_http_sanity.sh",
+    "run_reproducibility_package.sh"
+  ],
+  "sample": [
+    "sample/sanitized_node_slice.json"
+  ]
+}

@@ -1,0 +1,4 @@
+method,method_label,frozen_f1,frozen_fpr,frozen_attack_ip_detect_rate,frozen_mean_first_alert_delay_windows,frozen_false_alerts_per_run,frozen_false_alerts_per_10k_benign
+noisy_ce,Noisy-CE,0.874,0.168,0.990,0.58,63.4,1676
+cdro_fixed,CDRO-Fixed,0.827,0.239,0.987,0.64,120.4,2386
+cdro_ug,CDRO-UG (sw0),0.860,0.096,0.978,0.88,36.1,958
