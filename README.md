@@ -1,85 +1,95 @@
-# FedSTGCN CDRO Repro
+﻿# FedSTGCN-CDRO-Repro
 
-This repository is a reviewer-facing reproducibility release for the `CDRO-UG` weak-supervision and conditional-shift experiments built on the FedSTGCN codebase.
+This repository is the reviewer-facing reproducibility release for the `CDRO-UG` conditional-shift experiments built on the FedSTGCN codebase. The release now supports full replay of the paper-aligned `main` and `external-J` suites from released processed protocol graphs, and local validation on 2026-03-26 reproduced all 96 runs with `max_metric_delta = 0.0` and `max_threshold_delta = 0.0`.
 
-## Scope
+## Repository Navigation & Artifact Mapping
 
-This release is meant to support paper review and artifact inspection.
+| Path | What it contains | Reviewer usage |
+| --- | --- | --- |
+| `repro/run_review_artifact.sh` | One-command reviewer entry point | Full replay or quick verification |
+| `repro/review_artifact.py` | Replay / verification pipeline | Regenerates the core tables and figure |
+| `REPRODUCIBILITY.md` | Exact commands, outputs, and expectations | Start here for artifact evaluation |
+| `cdro_suite/main_rewrite_sw0_s5_v1/` | Paper-aligned main-batch suite | Replayed by default |
+| `cdro_suite/batch2_rewrite_sw0_s3_v2/` | Paper-aligned external-J suite | Replayed by default |
+| `cdro_suite/paper_ready_plus/` | Paper-ready tables, figures, and manuscript assets | Reference outputs for comparison |
+| `cdro_suite/main_baselineplus_s3_v1/` | Supplementary baselineplus main suite | Extra audit / ablation support |
+| `cdro_suite/batch2_baselineplus_s3_v1/` | Supplementary baselineplus external suite | Extra audit / ablation support |
+| `cdro_suite/repro_package_v1/` | Lightweight schema + manifest package | Fast structure review |
+| `biblio_us17/` | Public benchmark helper materials | Public-benchmark sanity path |
 
-It includes:
+## Global Environment Overview
 
-- Core training and evaluation code for the weak-supervision/CDRO pipeline
-- Protocol construction scripts
-- Public-benchmark preparation scripts
-- A lightweight reproducibility package with schemas, manifests, wrapper scripts, and a sanitized sample slice
-- Paper-ready figures, tables, and manuscript assets
-- Environment locks and one-click reproduction helpers in [`repro/`](repro/README.md)
+Recommended replay environment:
 
-It does not include:
+- Python with `torch`, `torch_geometric`, `numpy`, and `matplotlib`
+- The original project environment file is kept at `repro/environment-lock-dl.yml`
+- The lockfile mirror is kept at `repro/requirements-lock-dl.txt`
 
-- Private controlled network captures
-- Full raw traffic PCAPs
-- Large intermediate tensors, checkpoints, or full experiment output trees
+The commands below assume a Linux or WSL environment. In the local validation pass, the replay was executed with:
 
-The exact private-capture runs for the main and `external-J` suites therefore cannot be replayed from raw data alone. Instead, this repository exposes the code paths, split manifests, schema definitions, lightweight replay wrappers, and sanitized sample objects needed for auditability.
+```bash
+PYTHON_BIN=/home/user/miniconda3/envs/DL/bin/python
+```
 
-## Repository Layout
+## Complete Reviewer Replay
 
-- `generate_weak_supervision_views.py`: builds multi-view weak-label sidecars
-- `prepare_label_shift_protocol_graph.py`: attaches weak labels and builds shifted protocol graphs
-- `pi_gnn_train_cdro.py`: trains `noisy_ce`, `cdro_fixed`, `cdro_ug`, and related baselines
-- `run_cdro_suite.py`: end-to-end suite runner for weak-supervision/CDRO experiments
-- `analyze_cdro_fp_sources.py`: false-positive source decomposition
-- `analyze_cdro_weak_label_quality.py`: weak-label quality and trust audit
-- `make_reproducibility_package.py`: builds the lightweight reproducibility package
-- [`repro/`](repro/README.md): environment locks and one-click scripts
-- [`cdro_suite/repro_package_v1/`](cdro_suite/repro_package_v1/README.md): schemas, manifests, wrapper scripts, and sanitized sample slice
-- [`cdro_suite/paper_ready_plus/`](cdro_suite/paper_ready_plus/): paper-ready tables, figures, and manuscript assets
+Run the full paper-aligned replay:
 
-## Suggested Reproduction Paths
+```bash
+PYTHON_BIN=/home/user/miniconda3/envs/DL/bin/python bash repro/run_review_artifact.sh
+```
 
-### 1. Review the lightweight reproducibility package
+This command:
 
-Start with:
+1. Replays all runs in `main_rewrite_sw0_s5_v1`
+2. Replays all runs in `batch2_rewrite_sw0_s3_v2`
+3. Regenerates paired significance summaries
+4. Rebuilds the paper core tables
+5. Rebuilds the pooled-results figure
+6. Verifies the regenerated tables against `cdro_suite/paper_ready_plus/`
 
-- [`cdro_suite/repro_package_v1/README.md`](cdro_suite/repro_package_v1/README.md)
-- [`cdro_suite/repro_package_v1/package_manifest.json`](cdro_suite/repro_package_v1/package_manifest.json)
+Expected outputs:
 
-This is the smallest path to understand the graph schema, weak-label sidecar structure, split manifests, and replay entry points.
+- `review_artifact/rerun/replayed_suites/main_rewrite_sw0_s5_v1/cdro_summary.json`
+- `review_artifact/rerun/replayed_suites/batch2_rewrite_sw0_s3_v2/cdro_summary.json`
+- `review_artifact/rerun/paper_ready/table_maintext_core_results.csv`
+- `review_artifact/rerun/paper_ready/table_maintext_deployment_transfer.csv`
+- `review_artifact/rerun/paper_ready/fig1_pooled_results.png`
+- `review_artifact/rerun/repro_report.json`
+- `review_artifact/rerun/REPRO_SUMMARY.md`
 
-### 2. Reproduce public-benchmark processing
+Expected report fields:
 
-For the public HTTP benchmark path, inspect:
+- `core_table_exact_match: true`
+- `deployment_table_exact_match: true`
+- `result_comparison.runs_compared: 96`
+- `result_comparison.max_metric_delta: 0.0`
+- `result_comparison.max_threshold_delta: 0.0`
 
-- [`prepare_public_http_biblio_us17.py`](prepare_public_http_biblio_us17.py)
-- [`request_biblio_us17_copy.py`](request_biblio_us17_copy.py)
-- [`biblio_us17/README.en`](biblio_us17/README.en)
+## Quick Verification Without Retraining
 
-### 3. Re-run artifact-generation helpers
+If a reviewer only wants to rebuild the tables from the released run artifacts:
 
-Representative scripts:
+```bash
+PYTHON_BIN=/home/user/miniconda3/envs/DL/bin/python bash repro/run_review_artifact.sh --skip-rerun
+```
 
-- `run_public_http_sanity_suite.py`
-- `run_non_graph_clean_upper_suite.py`
-- `make_deployment_artifacts.py`
-- `make_attack_family_breakdown.py`
-- `make_analyst_case_studies.py`
+This writes outputs under `review_artifact/reference/` and verifies the checked-in core tables without rerunning training.
 
-### 4. Inspect paper-ready assets
+## Scope of Release
 
-The paper-facing figures, tables, and manuscript drafts are under:
+Included:
 
-- [`cdro_suite/paper_ready_plus/`](cdro_suite/paper_ready_plus/)
+- Paper-aligned processed protocol graphs
+- Weak-label sidecars
+- Reference run outputs
+- Reviewer replay scripts
+- Paper-ready tables and figures
 
-## Environment
+Not included:
 
-Primary environment locks:
+- Raw private PCAPs
+- Private source base graphs used before the released protocol-graph stage
+- Mininet recapture workflow for private data regeneration
 
-- [`DL_env_export.yml`](DL_env_export.yml)
-- [`DL_pip_freeze.txt`](DL_pip_freeze.txt)
-- [`repro/environment-lock-dl.yml`](repro/environment-lock-dl.yml)
-- [`repro/requirements-lock-dl.txt`](repro/requirements-lock-dl.txt)
-
-## Notes
-
-This repository is intentionally scoped for review and reproducibility support. It is not a full raw-data release.
+The public release therefore starts from processed protocol graphs, but the reported paper numbers are fully replayable from those released artifacts.

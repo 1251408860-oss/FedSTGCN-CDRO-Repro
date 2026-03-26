@@ -1,0 +1,37 @@
+{
+  "protocol": "label_prior_shift_ood",
+  "input_graph": "/home/user/FedSTGCN/top_conf_suite_recharge/graphs/scenario_e_three_tier_high2.pt",
+  "weak_labels": "/home/user/FedSTGCN/cdro_suite/main_rewrite_sw0_s5_v1/weak_labels/scenario_e_three_tier_high2_weak_labels.pt",
+  "output_graph": "/home/user/FedSTGCN/cdro_suite/main_rewrite_sw0_s5_v1/protocol_graphs/label_prior_shift_ood.pt",
+  "holdout_attack_type": "mimic",
+  "scenario_tags": {
+    "topology_type": "three_tier",
+    "load_profile": "high",
+    "bot_type_mode": "mixed",
+    "bot_role_types": "burst,mimic,slowburn"
+  },
+  "train": {
+    "nodes": 3542,
+    "benign_true": 855,
+    "attack_true": 2687,
+    "weak_covered": 1407,
+    "weak_benign": 614,
+    "weak_attack": 793
+  },
+  "val": {
+    "nodes": 705,
+    "benign_true": 321,
+    "attack_true": 384,
+    "weak_covered": 294,
+    "weak_benign": 194,
+    "weak_attack": 100
+  },
+  "test": {
+    "nodes": 1728,
+    "benign_true": 961,
+    "attack_true": 767,
+    "weak_covered": 730,
+    "weak_benign": 554,
+    "weak_attack": 176
+  }
+}

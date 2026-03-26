@@ -1,0 +1,236 @@
+{
+  "best_epoch": 1,
+  "best_val_f1": 0.916535433070866,
+  "best_threshold_raw": 0.3499999940395355,
+  "best_threshold": 0.3499999940395355,
+  "eval_temperature": 1.0,
+  "temperature_scaling": {
+    "enabled": false,
+    "temperature": 1.0,
+    "val_nll_raw": 0.0,
+    "val_nll_calibrated": 0.0,
+    "val_ece_raw": 0.0,
+    "val_ece_calibrated": 0.0,
+    "val_brier_raw": 0.0,
+    "val_brier_calibrated": 0.0,
+    "val_threshold_raw": 0.3499999940395355,
+    "val_threshold_calibrated": 0.3499999940395355,
+    "val_f1_raw": 0.916535433070866,
+    "val_f1_calibrated": 0.916535433070866
+  },
+  "final_eval_raw": {
+    "train": {
+      "accuracy": 0.8937163375224416,
+      "precision": 0.9395843402609957,
+      "recall": 0.9191489361702128,
+      "f1": 0.9292543021032504,
+      "fpr": 0.1865671641791045,
+      "ece": 0.3270559310913086,
+      "brier": 0.19805224239826202,
+      "tp": 1944,
+      "fp": 125,
+      "fn": 171,
+      "tn": 545,
+      "threshold": 0.3499999940395355,
+      "temperature": 1.0
+    },
+    "val": {
+      "accuracy": 0.9041591320072333,
+      "precision": 0.8738738738738738,
+      "recall": 0.9635761589403974,
+      "f1": 0.916535433070866,
+      "fpr": 0.16733067729083664,
+      "ece": 0.2699280083179474,
+      "brier": 0.16081511974334717,
+      "tp": 291,
+      "fp": 42,
+      "fn": 11,
+      "tn": 209,
+      "threshold": 0.3499999940395355,
+      "temperature": 1.0
+    },
+    "test_random": {
+      "accuracy": 0.8329654157468727,
+      "precision": 0.7410714285714286,
+      "recall": 0.9603305785123967,
+      "f1": 0.8365730741540677,
+      "fpr": 0.2692307692307692,
+      "ece": 0.24386921525001526,
+      "brier": 0.1471378654241562,
+      "tp": 581,
+      "fp": 203,
+      "fn": 24,
+      "tn": 551,
+      "threshold": 0.3499999940395355,
+      "temperature": 1.0
+    },
+    "test_temporal": {
+      "accuracy": 0.8329654157468727,
+      "precision": 0.7410714285714286,
+      "recall": 0.9603305785123967,
+      "f1": 0.8365730741540677,
+      "fpr": 0.2692307692307692,
+      "ece": 0.24386921525001526,
+      "brier": 0.1471378654241562,
+      "tp": 581,
+      "fp": 203,
+      "fn": 24,
+      "tn": 551,
+      "threshold": 0.3499999940395355,
+      "temperature": 1.0
+    }
+  },
+  "final_eval": {
+    "train": {
+      "accuracy": 0.8937163375224416,
+      "precision": 0.9395843402609957,
+      "recall": 0.9191489361702128,
+      "f1": 0.9292543021032504,
+      "fpr": 0.1865671641791045,
+      "ece": 0.3270559310913086,
+      "brier": 0.19805224239826202,
+      "tp": 1944,
+      "fp": 125,
+      "fn": 171,
+      "tn": 545,
+      "threshold": 0.3499999940395355,
+      "temperature": 1.0
+    },
+    "val": {
+      "accuracy": 0.9041591320072333,
+      "precision": 0.8738738738738738,
+      "recall": 0.9635761589403974,
+      "f1": 0.916535433070866,
+      "fpr": 0.16733067729083664,
+      "ece": 0.2699280083179474,
+      "brier": 0.16081511974334717,
+      "tp": 291,
+      "fp": 42,
+      "fn": 11,
+      "tn": 209,
+      "threshold": 0.3499999940395355,
+      "temperature": 1.0
+    },
+    "test_random": {
+      "accuracy": 0.8329654157468727,
+      "precision": 0.7410714285714286,
+      "recall": 0.9603305785123967,
+      "f1": 0.8365730741540677,
+      "fpr": 0.2692307692307692,
+      "ece": 0.24386921525001526,
+      "brier": 0.1471378654241562,
+      "tp": 581,
+      "fp": 203,
+      "fn": 24,
+      "tn": 551,
+      "threshold": 0.3499999940395355,
+      "temperature": 1.0
+    },
+    "test_temporal": {
+      "accuracy": 0.8329654157468727,
+      "precision": 0.7410714285714286,
+      "recall": 0.9603305785123967,
+      "f1": 0.8365730741540677,
+      "fpr": 0.2692307692307692,
+      "ece": 0.24386921525001526,
+      "brier": 0.1471378654241562,
+      "tp": 581,
+      "fp": 203,
+      "fn": 24,
+      "tn": 551,
+      "threshold": 0.3499999940395355,
+      "temperature": 1.0
+    }
+  },
+  "group_names": {
+    "0": "low_rho_low_uncertainty",
+    "1": "low_rho_high_uncertainty",
+    "2": "high_rho_low_uncertainty",
+    "3": "high_rho_high_uncertainty"
+  },
+  "group_thresholds": {
+    "uncertainty_mid": 0.7346910238265991,
+    "rho_mid": 27.279558181762695
+  },
+  "prior_stats": {
+    "source_prior": [],
+    "target_prior": []
+  },
+  "history": {
+    "train_loss": [
+      0.737653374671936,
+      0.6102389693260193,
+      0.5390636920928955,
+      0.539808452129364,
+      0.5389021635055542
+    ],
+    "val_f1": [
+      0.916535433070866,
+      0.9010238907849828,
+      0.8941979522184299,
+      0.889261744966443,
+      0.8848080133555928
+    ],
+    "val_ece": [
+      0.2699280083179474,
+      0.16214002668857574,
+      0.13236504793167114,
+      0.12794749438762665,
+      0.14552812278270721
+    ],
+    "val_threshold": [
+      0.3499999940395355,
+      0.29999998211860657,
+      0.19999998807907104,
+      0.14999999105930328,
+      0.14999999105930328
+    ],
+    "base_loss": [
+      0.737653374671936,
+      0.6102389693260193,
+      0.5390636920928955,
+      0.539808452129364,
+      0.5389021635055542
+    ],
+    "dro_loss": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  "runtime_sec": 0.41652369499206543,
+  "config": {
+    "graph_file": "/home/user/FedSTGCN/cdro_suite/batch2_baselineplus_s3_v1/protocol_graphs/label_prior_shift_ood.pt",
+    "method": "posterior_ce",
+    "hidden_dim": 64,
+    "heads": 4,
+    "dropout": 0.3,
+    "lr": 0.005,
+    "weight_decay": 0.0005,
+    "epochs": 10,
+    "patience": 4,
+    "lambda_dro": 0.5,
+    "ug_temperature": 0.35,
+    "ug_priority_loss_scale": 1.0,
+    "ug_uncertainty_scale": 0.2,
+    "ug_disagreement_scale": 0.1,
+    "ug_sample_weight_scale": 0.0,
+    "posthoc_temperature_scaling": false,
+    "temp_scale_min": 0.5,
+    "temp_scale_max": 5.0,
+    "temp_scale_steps": 31,
+    "seed": 33,
+    "force_cpu": true,
+    "physics_context": false,
+    "capacity": 120000.0,
+    "train_supervised_nodes": 1070,
+    "target_meta": {
+      "covered_train_nodes": 1070,
+      "pseudo_attack_nodes": 0,
+      "pseudo_benign_nodes": 0,
+      "effective_train_nodes": 1070
+    }
+  }
+}

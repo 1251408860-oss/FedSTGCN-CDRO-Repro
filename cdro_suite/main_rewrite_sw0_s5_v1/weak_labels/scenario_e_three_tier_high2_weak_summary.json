@@ -1,0 +1,111 @@
+{
+  "input_graph": "/home/user/FedSTGCN/top_conf_suite_recharge/graphs/scenario_e_three_tier_high2.pt",
+  "manifest_file": "/home/user/FedSTGCN/real_collection/scenario_e_three_tier_high2/arena_manifest_v2.json",
+  "output_files": {
+    "weak_labels_pt": "/home/user/FedSTGCN/cdro_suite/main_rewrite_sw0_s5_v1/weak_labels/scenario_e_three_tier_high2_weak_labels.pt",
+    "weak_summary_json": "/home/user/FedSTGCN/cdro_suite/main_rewrite_sw0_s5_v1/weak_labels/scenario_e_three_tier_high2_weak_summary.json",
+    "weak_view_stats_csv": "/home/user/FedSTGCN/cdro_suite/main_rewrite_sw0_s5_v1/weak_labels/scenario_e_three_tier_high2_weak_view_stats.csv"
+  },
+  "graph_stats": {
+    "num_nodes": 5976,
+    "flow_nodes": 5975,
+    "attack_nodes_true": 3838,
+    "benign_nodes_true": 2137
+  },
+  "scenario_tags": {
+    "topology_type": "three_tier",
+    "load_profile": "high",
+    "bot_type_mode": "mixed",
+    "bot_role_types": "burst,mimic,slowburn"
+  },
+  "aggregate": {
+    "coverage": 0.40679383277893066,
+    "abstain_rate": 0.59303879737854,
+    "attack_rate": 0.17891213297843933,
+    "mean_prob_attack": 0.4618249833583832,
+    "accuracy_on_covered": 0.7914438247680664,
+    "attack_precision": 0.9120673537254333,
+    "benign_precision": 0.6967694759368896
+  },
+  "view_rows": [
+    {
+      "view": "rate_view",
+      "coverage": 0.4675368070602417,
+      "abstain_rate": 0.532295823097229,
+      "attack_rate": 0.21456067264080048,
+      "mean_prob_attack": 0.46961599588394165,
+      "accuracy_on_covered": 0.6610594391822815,
+      "attack_precision": 0.7418096661567688,
+      "benign_precision": 0.5925925970077515
+    },
+    {
+      "view": "entropy_view",
+      "coverage": 0.40829986333847046,
+      "abstain_rate": 0.591532826423645,
+      "attack_rate": 0.0,
+      "mean_prob_attack": 0.39947906136512756,
+      "accuracy_on_covered": 0.8758196830749512,
+      "attack_precision": 0.0,
+      "benign_precision": 0.8758196830749512
+    },
+    {
+      "view": "port_view",
+      "coverage": 0.3686412274837494,
+      "abstain_rate": 0.6311914324760437,
+      "attack_rate": 0.33405858278274536,
+      "mean_prob_attack": 0.5620020627975464,
+      "accuracy_on_covered": 0.9868361353874207,
+      "attack_precision": 0.9864729642868042,
+      "benign_precision": 0.990338146686554
+    },
+    {
+      "view": "latency_view",
+      "coverage": 0.3637884855270386,
+      "abstain_rate": 0.6360442042350769,
+      "attack_rate": 0.1633472740650177,
+      "mean_prob_attack": 0.464599072933197,
+      "accuracy_on_covered": 0.6251149773597717,
+      "attack_precision": 0.6854507923126221,
+      "benign_precision": 0.5759599208831787
+    },
+    {
+      "view": "physics_view",
+      "coverage": 0.3222891688346863,
+      "abstain_rate": 0.6775435209274292,
+      "attack_rate": 0.15430963039398193,
+      "mean_prob_attack": 0.49422094225883484,
+      "accuracy_on_covered": 0.5514018535614014,
+      "attack_precision": 0.698481559753418,
+      "benign_precision": 0.4163346588611603
+    },
+    {
+      "view": "aggregate",
+      "coverage": 0.40679383277893066,
+      "abstain_rate": 0.59303879737854,
+      "attack_rate": 0.17891213297843933,
+      "mean_prob_attack": 0.4618249833583832,
+      "accuracy_on_covered": 0.7914438247680664,
+      "attack_precision": 0.9120673537254333,
+      "benign_precision": 0.6967694759368896
+    }
+  ],
+  "proxy_means": {
+    "rho_proxy": 24.884357452392578,
+    "camouflage_proxy": 0.42865896224975586,
+    "congestion_proxy": 0.5748588442802429,
+    "strategy_proxy": 0.616284966468811
+  },
+  "config": {
+    "input_graph": "/home/user/FedSTGCN/top_conf_suite_recharge/graphs/scenario_e_three_tier_high2.pt",
+    "manifest_file": "/home/user/FedSTGCN/real_collection/scenario_e_three_tier_high2/arena_manifest_v2.json",
+    "output_dir": "/home/user/FedSTGCN/cdro_suite/main_rewrite_sw0_s5_v1/weak_labels",
+    "output_prefix": "scenario_e_three_tier_high2",
+    "attack_threshold": 0.67,
+    "benign_threshold": 0.33,
+    "min_votes": 2,
+    "camouflage_bias": 0.2,
+    "congestion_bias": 0.15,
+    "strategy_bias": 0.1,
+    "seed": 42
+  }
+}

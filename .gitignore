@@ -1,14 +1,23 @@
-__pycache__/
+﻿__pycache__/
 *.pyc
 *.pyo
 *.pyd
 .DS_Store
 Thumbs.db
 
-# Keep the public repo lightweight.
-*.pt
+# Keep raw/private artifacts out of the public repo.
 *.pcap
+
+# Reviewer release keeps only the published experiment bundles.
+*.pt
+!cdro_suite/main_rewrite_sw0_s5_v1/**/*.pt
+!cdro_suite/batch2_rewrite_sw0_s3_v2/**/*.pt
+!cdro_suite/main_baselineplus_s3_v1/**/*.pt
+!cdro_suite/batch2_baselineplus_s3_v1/**/*.pt
+
+# Local logs / replay workdirs
 *.log
+review_artifact*/
 
 # Local environments
 .venv/

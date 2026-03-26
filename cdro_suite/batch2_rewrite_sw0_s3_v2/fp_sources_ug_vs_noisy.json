@@ -1,0 +1,1834 @@
+{
+  "summary_json": "/home/user/FedSTGCN/cdro_suite/batch2_rewrite_sw0_s3_v2/cdro_summary.json",
+  "method_a": "cdro_ug",
+  "method_b": "noisy_ce",
+  "rows": [
+    {
+      "protocol": "label_prior_shift_ood",
+      "seed": 11,
+      "method_a": {
+        "weak_bucket": {
+          "abstain": {
+            "benign_total": 277,
+            "fp": 173,
+            "fpr": 0.6245487364620939,
+            "mean_prob_attack": 0.31275234842128274
+          },
+          "weak_benign": {
+            "benign_total": 477,
+            "fp": 24,
+            "fpr": 0.050314465408805034,
+            "mean_prob_attack": 0.07684179821854117
+          },
+          "weak_attack": {
+            "benign_total": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.0
+          }
+        },
+        "group_bucket": {
+          "low_rho_low_uncertainty": {
+            "benign_total": 199,
+            "fp": 8,
+            "fpr": 0.04020100502512563,
+            "mean_prob_attack": 0.07554156816185419
+          },
+          "low_rho_high_uncertainty": {
+            "benign_total": 156,
+            "fp": 20,
+            "fpr": 0.1282051282051282,
+            "mean_prob_attack": 0.10983443871522561
+          },
+          "high_rho_low_uncertainty": {
+            "benign_total": 140,
+            "fp": 12,
+            "fpr": 0.08571428571428572,
+            "mean_prob_attack": 0.0805980886731829
+          },
+          "high_rho_high_uncertainty": {
+            "benign_total": 259,
+            "fp": 157,
+            "fpr": 0.6061776061776062,
+            "mean_prob_attack": 0.3082442707076496
+          }
+        }
+      },
+      "method_b": {
+        "weak_bucket": {
+          "abstain": {
+            "benign_total": 277,
+            "fp": 178,
+            "fpr": 0.6425992779783394,
+            "mean_prob_attack": 0.32931433171571806
+          },
+          "weak_benign": {
+            "benign_total": 477,
+            "fp": 28,
+            "fpr": 0.05870020964360587,
+            "mean_prob_attack": 0.07963160548819936
+          },
+          "weak_attack": {
+            "benign_total": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.0
+          }
+        },
+        "group_bucket": {
+          "low_rho_low_uncertainty": {
+            "benign_total": 199,
+            "fp": 9,
+            "fpr": 0.04522613065326633,
+            "mean_prob_attack": 0.07834360228111996
+          },
+          "low_rho_high_uncertainty": {
+            "benign_total": 156,
+            "fp": 22,
+            "fpr": 0.14102564102564102,
+            "mean_prob_attack": 0.11373448983216897
+          },
+          "high_rho_low_uncertainty": {
+            "benign_total": 140,
+            "fp": 15,
+            "fpr": 0.10714285714285714,
+            "mean_prob_attack": 0.08453290803091866
+          },
+          "high_rho_high_uncertainty": {
+            "benign_total": 259,
+            "fp": 160,
+            "fpr": 0.6177606177606177,
+            "mean_prob_attack": 0.32446633710824385
+          }
+        }
+      }
+    },
+    {
+      "protocol": "label_prior_shift_ood",
+      "seed": 22,
+      "method_a": {
+        "weak_bucket": {
+          "abstain": {
+            "benign_total": 277,
+            "fp": 149,
+            "fpr": 0.5379061371841155,
+            "mean_prob_attack": 0.4356093699320989
+          },
+          "weak_benign": {
+            "benign_total": 477,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.3444990561943134
+          },
+          "weak_attack": {
+            "benign_total": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.0
+          }
+        },
+        "group_bucket": {
+          "low_rho_low_uncertainty": {
+            "benign_total": 199,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.3443306007576947
+          },
+          "low_rho_high_uncertainty": {
+            "benign_total": 156,
+            "fp": 15,
+            "fpr": 0.09615384615384616,
+            "mean_prob_attack": 0.3539937337239583
+          },
+          "high_rho_low_uncertainty": {
+            "benign_total": 140,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.3493487766810826
+          },
+          "high_rho_high_uncertainty": {
+            "benign_total": 259,
+            "fp": 134,
+            "fpr": 0.5173745173745173,
+            "mean_prob_attack": 0.43373048995912766
+          }
+        }
+      },
+      "method_b": {
+        "weak_bucket": {
+          "abstain": {
+            "benign_total": 277,
+            "fp": 168,
+            "fpr": 0.6064981949458483,
+            "mean_prob_attack": 0.4860394749830776
+          },
+          "weak_benign": {
+            "benign_total": 477,
+            "fp": 13,
+            "fpr": 0.027253668763102725,
+            "mean_prob_attack": 0.3542101398204108
+          },
+          "weak_attack": {
+            "benign_total": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.0
+          }
+        },
+        "group_bucket": {
+          "low_rho_low_uncertainty": {
+            "benign_total": 199,
+            "fp": 5,
+            "fpr": 0.02512562814070352,
+            "mean_prob_attack": 0.3541127113840688
+          },
+          "low_rho_high_uncertainty": {
+            "benign_total": 156,
+            "fp": 18,
+            "fpr": 0.11538461538461539,
+            "mean_prob_attack": 0.36969632368821365
+          },
+          "high_rho_low_uncertainty": {
+            "benign_total": 140,
+            "fp": 8,
+            "fpr": 0.05714285714285714,
+            "mean_prob_attack": 0.3611384800502232
+          },
+          "high_rho_high_uncertainty": {
+            "benign_total": 259,
+            "fp": 150,
+            "fpr": 0.5791505791505791,
+            "mean_prob_attack": 0.4822036566421332
+          }
+        }
+      }
+    },
+    {
+      "protocol": "label_prior_shift_ood",
+      "seed": 33,
+      "method_a": {
+        "weak_bucket": {
+          "abstain": {
+            "benign_total": 277,
+            "fp": 152,
+            "fpr": 0.5487364620938628,
+            "mean_prob_attack": 0.4039404142634533
+          },
+          "weak_benign": {
+            "benign_total": 477,
+            "fp": 3,
+            "fpr": 0.006289308176100629,
+            "mean_prob_attack": 0.2991428975039308
+          },
+          "weak_attack": {
+            "benign_total": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.0
+          }
+        },
+        "group_bucket": {
+          "low_rho_low_uncertainty": {
+            "benign_total": 199,
+            "fp": 2,
+            "fpr": 0.010050251256281407,
+            "mean_prob_attack": 0.30181146746304766
+          },
+          "low_rho_high_uncertainty": {
+            "benign_total": 156,
+            "fp": 15,
+            "fpr": 0.09615384615384616,
+            "mean_prob_attack": 0.31157662318303037
+          },
+          "high_rho_low_uncertainty": {
+            "benign_total": 140,
+            "fp": 1,
+            "fpr": 0.007142857142857143,
+            "mean_prob_attack": 0.30531302860804965
+          },
+          "high_rho_high_uncertainty": {
+            "benign_total": 259,
+            "fp": 137,
+            "fpr": 0.528957528957529,
+            "mean_prob_attack": 0.3983490697205297
+          }
+        }
+      },
+      "method_b": {
+        "weak_bucket": {
+          "abstain": {
+            "benign_total": 277,
+            "fp": 170,
+            "fpr": 0.6137184115523465,
+            "mean_prob_attack": 0.4417281443461614
+          },
+          "weak_benign": {
+            "benign_total": 477,
+            "fp": 15,
+            "fpr": 0.031446540880503145,
+            "mean_prob_attack": 0.3161964336531217
+          },
+          "weak_attack": {
+            "benign_total": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.0
+          }
+        },
+        "group_bucket": {
+          "low_rho_low_uncertainty": {
+            "benign_total": 199,
+            "fp": 5,
+            "fpr": 0.02512562814070352,
+            "mean_prob_attack": 0.3184118989724011
+          },
+          "low_rho_high_uncertainty": {
+            "benign_total": 156,
+            "fp": 20,
+            "fpr": 0.1282051282051282,
+            "mean_prob_attack": 0.3316634740584936
+          },
+          "high_rho_low_uncertainty": {
+            "benign_total": 140,
+            "fp": 10,
+            "fpr": 0.07142857142857142,
+            "mean_prob_attack": 0.32376360212053573
+          },
+          "high_rho_high_uncertainty": {
+            "benign_total": 259,
+            "fp": 150,
+            "fpr": 0.5791505791505791,
+            "mean_prob_attack": 0.4353436797742218
+          }
+        }
+      }
+    },
+    {
+      "protocol": "weak_attack_strategy_ood",
+      "seed": 11,
+      "method_a": {
+        "weak_bucket": {
+          "abstain": {
+            "benign_total": 110,
+            "fp": 68,
+            "fpr": 0.6181818181818182,
+            "mean_prob_attack": 0.27868487618186255
+          },
+          "weak_benign": {
+            "benign_total": 236,
+            "fp": 3,
+            "fpr": 0.012711864406779662,
+            "mean_prob_attack": 0.041407964997372385
+          },
+          "weak_attack": {
+            "benign_total": 1,
+            "fp": 1,
+            "fpr": 1.0,
+            "mean_prob_attack": 0.911509096622467
+          }
+        },
+        "group_bucket": {
+          "low_rho_low_uncertainty": {
+            "benign_total": 95,
+            "fp": 3,
+            "fpr": 0.031578947368421054,
+            "mean_prob_attack": 0.042009925842285155
+          },
+          "low_rho_high_uncertainty": {
+            "benign_total": 97,
+            "fp": 16,
+            "fpr": 0.16494845360824742,
+            "mean_prob_attack": 0.09947494624816265
+          },
+          "high_rho_low_uncertainty": {
+            "benign_total": 70,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.04039780412401472
+          },
+          "high_rho_high_uncertainty": {
+            "benign_total": 85,
+            "fp": 53,
+            "fpr": 0.6235294117647059,
+            "mean_prob_attack": 0.2926031449261834
+          }
+        }
+      },
+      "method_b": {
+        "weak_bucket": {
+          "abstain": {
+            "benign_total": 110,
+            "fp": 68,
+            "fpr": 0.6181818181818182,
+            "mean_prob_attack": 0.30861507762562146
+          },
+          "weak_benign": {
+            "benign_total": 236,
+            "fp": 6,
+            "fpr": 0.025423728813559324,
+            "mean_prob_attack": 0.07061423285532806
+          },
+          "weak_attack": {
+            "benign_total": 1,
+            "fp": 1,
+            "fpr": 1.0,
+            "mean_prob_attack": 0.830578625202179
+          }
+        },
+        "group_bucket": {
+          "low_rho_low_uncertainty": {
+            "benign_total": 95,
+            "fp": 4,
+            "fpr": 0.042105263157894736,
+            "mean_prob_attack": 0.07367610429462633
+          },
+          "low_rho_high_uncertainty": {
+            "benign_total": 97,
+            "fp": 16,
+            "fpr": 0.16494845360824742,
+            "mean_prob_attack": 0.12616576361901982
+          },
+          "high_rho_low_uncertainty": {
+            "benign_total": 70,
+            "fp": 2,
+            "fpr": 0.02857142857142857,
+            "mean_prob_attack": 0.07124027524675641
+          },
+          "high_rho_high_uncertainty": {
+            "benign_total": 85,
+            "fp": 53,
+            "fpr": 0.6235294117647059,
+            "mean_prob_attack": 0.32022438049316404
+          }
+        }
+      }
+    },
+    {
+      "protocol": "weak_attack_strategy_ood",
+      "seed": 22,
+      "method_a": {
+        "weak_bucket": {
+          "abstain": {
+            "benign_total": 110,
+            "fp": 63,
+            "fpr": 0.5727272727272728,
+            "mean_prob_attack": 0.44113856228915127
+          },
+          "weak_benign": {
+            "benign_total": 236,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.3438162076271186
+          },
+          "weak_attack": {
+            "benign_total": 1,
+            "fp": 1,
+            "fpr": 1.0,
+            "mean_prob_attack": 0.7822213768959045
+          }
+        },
+        "group_bucket": {
+          "low_rho_low_uncertainty": {
+            "benign_total": 95,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.3484851234837582
+          },
+          "low_rho_high_uncertainty": {
+            "benign_total": 97,
+            "fp": 14,
+            "fpr": 0.14432989690721648,
+            "mean_prob_attack": 0.36127519115959245
+          },
+          "high_rho_low_uncertainty": {
+            "benign_total": 70,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.3473707744053432
+          },
+          "high_rho_high_uncertainty": {
+            "benign_total": 85,
+            "fp": 50,
+            "fpr": 0.5882352941176471,
+            "mean_prob_attack": 0.44685121424057905
+          }
+        }
+      },
+      "method_b": {
+        "weak_bucket": {
+          "abstain": {
+            "benign_total": 110,
+            "fp": 67,
+            "fpr": 0.6090909090909091,
+            "mean_prob_attack": 0.4790822809392756
+          },
+          "weak_benign": {
+            "benign_total": 236,
+            "fp": 1,
+            "fpr": 0.00423728813559322,
+            "mean_prob_attack": 0.35536517127085543
+          },
+          "weak_attack": {
+            "benign_total": 1,
+            "fp": 1,
+            "fpr": 1.0,
+            "mean_prob_attack": 0.8078284859657288
+          }
+        },
+        "group_bucket": {
+          "low_rho_low_uncertainty": {
+            "benign_total": 95,
+            "fp": 1,
+            "fpr": 0.010526315789473684,
+            "mean_prob_attack": 0.3599040784333882
+          },
+          "low_rho_high_uncertainty": {
+            "benign_total": 97,
+            "fp": 15,
+            "fpr": 0.15463917525773196,
+            "mean_prob_attack": 0.37997578099830864
+          },
+          "high_rho_low_uncertainty": {
+            "benign_total": 70,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.35956478118896484
+          },
+          "high_rho_high_uncertainty": {
+            "benign_total": 85,
+            "fp": 53,
+            "fpr": 0.6235294117647059,
+            "mean_prob_attack": 0.484176321590648
+          }
+        }
+      }
+    },
+    {
+      "protocol": "weak_attack_strategy_ood",
+      "seed": 33,
+      "method_a": {
+        "weak_bucket": {
+          "abstain": {
+            "benign_total": 110,
+            "fp": 65,
+            "fpr": 0.5909090909090909,
+            "mean_prob_attack": 0.3204834677956321
+          },
+          "weak_benign": {
+            "benign_total": 236,
+            "fp": 3,
+            "fpr": 0.012711864406779662,
+            "mean_prob_attack": 0.16962470038462493
+          },
+          "weak_attack": {
+            "benign_total": 1,
+            "fp": 1,
+            "fpr": 1.0,
+            "mean_prob_attack": 0.8024879693984985
+          }
+        },
+        "group_bucket": {
+          "low_rho_low_uncertainty": {
+            "benign_total": 95,
+            "fp": 3,
+            "fpr": 0.031578947368421054,
+            "mean_prob_attack": 0.17292327880859376
+          },
+          "low_rho_high_uncertainty": {
+            "benign_total": 97,
+            "fp": 16,
+            "fpr": 0.16494845360824742,
+            "mean_prob_attack": 0.20380842071218588
+          },
+          "high_rho_low_uncertainty": {
+            "benign_total": 70,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.171792357308524
+          },
+          "high_rho_high_uncertainty": {
+            "benign_total": 85,
+            "fp": 50,
+            "fpr": 0.5882352941176471,
+            "mean_prob_attack": 0.32781771491555606
+          }
+        }
+      },
+      "method_b": {
+        "weak_bucket": {
+          "abstain": {
+            "benign_total": 110,
+            "fp": 58,
+            "fpr": 0.5272727272727272,
+            "mean_prob_attack": 0.33624631708318536
+          },
+          "weak_benign": {
+            "benign_total": 236,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.17899107528945146
+          },
+          "weak_attack": {
+            "benign_total": 1,
+            "fp": 1,
+            "fpr": 1.0,
+            "mean_prob_attack": 0.8217659592628479
+          }
+        },
+        "group_bucket": {
+          "low_rho_low_uncertainty": {
+            "benign_total": 95,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.18317331012926605
+          },
+          "low_rho_high_uncertainty": {
+            "benign_total": 97,
+            "fp": 13,
+            "fpr": 0.13402061855670103,
+            "mean_prob_attack": 0.21357424234606556
+          },
+          "high_rho_low_uncertainty": {
+            "benign_total": 70,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.1811056273324149
+          },
+          "high_rho_high_uncertainty": {
+            "benign_total": 85,
+            "fp": 46,
+            "fpr": 0.5411764705882353,
+            "mean_prob_attack": 0.34417874953326055
+          }
+        }
+      }
+    },
+    {
+      "protocol": "weak_temporal_ood",
+      "seed": 11,
+      "method_a": {
+        "weak_bucket": {
+          "abstain": {
+            "benign_total": 174,
+            "fp": 110,
+            "fpr": 0.632183908045977,
+            "mean_prob_attack": 0.2662159053758643
+          },
+          "weak_benign": {
+            "benign_total": 173,
+            "fp": 2,
+            "fpr": 0.011560693641618497,
+            "mean_prob_attack": 0.062318680603380146
+          },
+          "weak_attack": {
+            "benign_total": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.0
+          }
+        },
+        "group_bucket": {
+          "low_rho_low_uncertainty": {
+            "benign_total": 58,
+            "fp": 1,
+            "fpr": 0.017241379310344827,
+            "mean_prob_attack": 0.060318733083790745
+          },
+          "low_rho_high_uncertainty": {
+            "benign_total": 52,
+            "fp": 11,
+            "fpr": 0.21153846153846154,
+            "mean_prob_attack": 0.11557439657358023
+          },
+          "high_rho_low_uncertainty": {
+            "benign_total": 69,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.06464627860248953
+          },
+          "high_rho_high_uncertainty": {
+            "benign_total": 168,
+            "fp": 100,
+            "fpr": 0.5952380952380952,
+            "mean_prob_attack": 0.2567485173543294
+          }
+        }
+      },
+      "method_b": {
+        "weak_bucket": {
+          "abstain": {
+            "benign_total": 174,
+            "fp": 125,
+            "fpr": 0.7183908045977011,
+            "mean_prob_attack": 0.34662461554867097
+          },
+          "weak_benign": {
+            "benign_total": 173,
+            "fp": 15,
+            "fpr": 0.08670520231213873,
+            "mean_prob_attack": 0.08300996240163815
+          },
+          "weak_attack": {
+            "benign_total": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.0
+          }
+        },
+        "group_bucket": {
+          "low_rho_low_uncertainty": {
+            "benign_total": 58,
+            "fp": 3,
+            "fpr": 0.05172413793103448,
+            "mean_prob_attack": 0.07984472965372019
+          },
+          "low_rho_high_uncertainty": {
+            "benign_total": 52,
+            "fp": 14,
+            "fpr": 0.2692307692307692,
+            "mean_prob_attack": 0.15017056465148926
+          },
+          "high_rho_low_uncertainty": {
+            "benign_total": 69,
+            "fp": 10,
+            "fpr": 0.14492753623188406,
+            "mean_prob_attack": 0.0874163447946742
+          },
+          "high_rho_high_uncertainty": {
+            "benign_total": 168,
+            "fp": 113,
+            "fpr": 0.6726190476190477,
+            "mean_prob_attack": 0.3345346223740351
+          }
+        }
+      }
+    },
+    {
+      "protocol": "weak_temporal_ood",
+      "seed": 22,
+      "method_a": {
+        "weak_bucket": {
+          "abstain": {
+            "benign_total": 174,
+            "fp": 74,
+            "fpr": 0.42528735632183906,
+            "mean_prob_attack": 0.4074571105255478
+          },
+          "weak_benign": {
+            "benign_total": 173,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.3449630296299223
+          },
+          "weak_attack": {
+            "benign_total": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.0
+          }
+        },
+        "group_bucket": {
+          "low_rho_low_uncertainty": {
+            "benign_total": 58,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.34300823869376346
+          },
+          "low_rho_high_uncertainty": {
+            "benign_total": 52,
+            "fp": 6,
+            "fpr": 0.11538461538461539,
+            "mean_prob_attack": 0.3570607625521146
+          },
+          "high_rho_low_uncertainty": {
+            "benign_total": 69,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.35020808897156647
+          },
+          "high_rho_high_uncertainty": {
+            "benign_total": 168,
+            "fp": 68,
+            "fpr": 0.40476190476190477,
+            "mean_prob_attack": 0.4044651303972517
+          }
+        }
+      },
+      "method_b": {
+        "weak_bucket": {
+          "abstain": {
+            "benign_total": 174,
+            "fp": 111,
+            "fpr": 0.6379310344827587,
+            "mean_prob_attack": 0.4861042855799883
+          },
+          "weak_benign": {
+            "benign_total": 173,
+            "fp": 3,
+            "fpr": 0.017341040462427744,
+            "mean_prob_attack": 0.3558169017637396
+          },
+          "weak_attack": {
+            "benign_total": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.0
+          }
+        },
+        "group_bucket": {
+          "low_rho_low_uncertainty": {
+            "benign_total": 58,
+            "fp": 1,
+            "fpr": 0.017241379310344827,
+            "mean_prob_attack": 0.35309620561270877
+          },
+          "low_rho_high_uncertainty": {
+            "benign_total": 52,
+            "fp": 11,
+            "fpr": 0.21153846153846154,
+            "mean_prob_attack": 0.38620754388662487
+          },
+          "high_rho_low_uncertainty": {
+            "benign_total": 69,
+            "fp": 2,
+            "fpr": 0.028985507246376812,
+            "mean_prob_attack": 0.3635406770567963
+          },
+          "high_rho_high_uncertainty": {
+            "benign_total": 168,
+            "fp": 100,
+            "fpr": 0.5952380952380952,
+            "mean_prob_attack": 0.4791178022112165
+          }
+        }
+      }
+    },
+    {
+      "protocol": "weak_temporal_ood",
+      "seed": 33,
+      "method_a": {
+        "weak_bucket": {
+          "abstain": {
+            "benign_total": 174,
+            "fp": 111,
+            "fpr": 0.6379310344827587,
+            "mean_prob_attack": 0.3730875212570717
+          },
+          "weak_benign": {
+            "benign_total": 173,
+            "fp": 3,
+            "fpr": 0.017341040462427744,
+            "mean_prob_attack": 0.2867698007925397
+          },
+          "weak_attack": {
+            "benign_total": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.0
+          }
+        },
+        "group_bucket": {
+          "low_rho_low_uncertainty": {
+            "benign_total": 58,
+            "fp": 1,
+            "fpr": 0.017241379310344827,
+            "mean_prob_attack": 0.28735338408371497
+          },
+          "low_rho_high_uncertainty": {
+            "benign_total": 52,
+            "fp": 11,
+            "fpr": 0.21153846153846154,
+            "mean_prob_attack": 0.3098870790921725
+          },
+          "high_rho_low_uncertainty": {
+            "benign_total": 69,
+            "fp": 2,
+            "fpr": 0.028985507246376812,
+            "mean_prob_attack": 0.29122609677522077
+          },
+          "high_rho_high_uncertainty": {
+            "benign_total": 168,
+            "fp": 100,
+            "fpr": 0.5952380952380952,
+            "mean_prob_attack": 0.366983209337507
+          }
+        }
+      },
+      "method_b": {
+        "weak_bucket": {
+          "abstain": {
+            "benign_total": 174,
+            "fp": 124,
+            "fpr": 0.7126436781609196,
+            "mean_prob_attack": 0.3694914894542475
+          },
+          "weak_benign": {
+            "benign_total": 173,
+            "fp": 24,
+            "fpr": 0.13872832369942195,
+            "mean_prob_attack": 0.17914832671942738
+          },
+          "weak_attack": {
+            "benign_total": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.0
+          }
+        },
+        "group_bucket": {
+          "low_rho_low_uncertainty": {
+            "benign_total": 58,
+            "fp": 6,
+            "fpr": 0.10344827586206896,
+            "mean_prob_attack": 0.17808660967596646
+          },
+          "low_rho_high_uncertainty": {
+            "benign_total": 52,
+            "fp": 12,
+            "fpr": 0.23076923076923078,
+            "mean_prob_attack": 0.2283938848055326
+          },
+          "high_rho_low_uncertainty": {
+            "benign_total": 69,
+            "fp": 15,
+            "fpr": 0.21739130434782608,
+            "mean_prob_attack": 0.18298667410145636
+          },
+          "high_rho_high_uncertainty": {
+            "benign_total": 168,
+            "fp": 115,
+            "fpr": 0.6845238095238095,
+            "mean_prob_attack": 0.3598368735540481
+          }
+        }
+      }
+    },
+    {
+      "protocol": "weak_topology_ood",
+      "seed": 11,
+      "method_a": {
+        "weak_bucket": {
+          "abstain": {
+            "benign_total": 110,
+            "fp": 69,
+            "fpr": 0.6272727272727273,
+            "mean_prob_attack": 0.29601322520862927
+          },
+          "weak_benign": {
+            "benign_total": 236,
+            "fp": 3,
+            "fpr": 0.012711864406779662,
+            "mean_prob_attack": 0.038343647779044455
+          },
+          "weak_attack": {
+            "benign_total": 1,
+            "fp": 1,
+            "fpr": 1.0,
+            "mean_prob_attack": 0.8946259617805481
+          }
+        },
+        "group_bucket": {
+          "low_rho_low_uncertainty": {
+            "benign_total": 90,
+            "fp": 3,
+            "fpr": 0.03333333333333333,
+            "mean_prob_attack": 0.03903807534111871
+          },
+          "low_rho_high_uncertainty": {
+            "benign_total": 95,
+            "fp": 17,
+            "fpr": 0.17894736842105263,
+            "mean_prob_attack": 0.10341266832853618
+          },
+          "high_rho_low_uncertainty": {
+            "benign_total": 70,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.03731843403407505
+          },
+          "high_rho_high_uncertainty": {
+            "benign_total": 92,
+            "fp": 53,
+            "fpr": 0.5760869565217391,
+            "mean_prob_attack": 0.28864408575970196
+          }
+        }
+      },
+      "method_b": {
+        "weak_bucket": {
+          "abstain": {
+            "benign_total": 110,
+            "fp": 70,
+            "fpr": 0.6363636363636364,
+            "mean_prob_attack": 0.32722022316672583
+          },
+          "weak_benign": {
+            "benign_total": 236,
+            "fp": 9,
+            "fpr": 0.038135593220338986,
+            "mean_prob_attack": 0.0734893103777352
+          },
+          "weak_attack": {
+            "benign_total": 1,
+            "fp": 1,
+            "fpr": 1.0,
+            "mean_prob_attack": 0.8279174566268921
+          }
+        },
+        "group_bucket": {
+          "low_rho_low_uncertainty": {
+            "benign_total": 90,
+            "fp": 4,
+            "fpr": 0.044444444444444446,
+            "mean_prob_attack": 0.07685760392083062
+          },
+          "low_rho_high_uncertainty": {
+            "benign_total": 95,
+            "fp": 17,
+            "fpr": 0.17894736842105263,
+            "mean_prob_attack": 0.1349637985229492
+          },
+          "high_rho_low_uncertainty": {
+            "benign_total": 70,
+            "fp": 5,
+            "fpr": 0.07142857142857142,
+            "mean_prob_attack": 0.07436351094927107
+          },
+          "high_rho_high_uncertainty": {
+            "benign_total": 92,
+            "fp": 54,
+            "fpr": 0.5869565217391305,
+            "mean_prob_attack": 0.3176241750302522
+          }
+        }
+      }
+    },
+    {
+      "protocol": "weak_topology_ood",
+      "seed": 22,
+      "method_a": {
+        "weak_bucket": {
+          "abstain": {
+            "benign_total": 110,
+            "fp": 55,
+            "fpr": 0.5,
+            "mean_prob_attack": 0.4270056291060014
+          },
+          "weak_benign": {
+            "benign_total": 236,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.3394669354972193
+          },
+          "weak_attack": {
+            "benign_total": 1,
+            "fp": 1,
+            "fpr": 1.0,
+            "mean_prob_attack": 0.7583562731742859
+          }
+        },
+        "group_bucket": {
+          "low_rho_low_uncertainty": {
+            "benign_total": 90,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.34300051795111763
+          },
+          "low_rho_high_uncertainty": {
+            "benign_total": 95,
+            "fp": 11,
+            "fpr": 0.11578947368421053,
+            "mean_prob_attack": 0.3572447124280428
+          },
+          "high_rho_low_uncertainty": {
+            "benign_total": 70,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.34145475115094864
+          },
+          "high_rho_high_uncertainty": {
+            "benign_total": 92,
+            "fp": 45,
+            "fpr": 0.4891304347826087,
+            "mean_prob_attack": 0.42535918691883917
+          }
+        }
+      },
+      "method_b": {
+        "weak_bucket": {
+          "abstain": {
+            "benign_total": 110,
+            "fp": 68,
+            "fpr": 0.6181818181818182,
+            "mean_prob_attack": 0.48767696727405896
+          },
+          "weak_benign": {
+            "benign_total": 236,
+            "fp": 3,
+            "fpr": 0.012711864406779662,
+            "mean_prob_attack": 0.3535279742741989
+          },
+          "weak_attack": {
+            "benign_total": 1,
+            "fp": 1,
+            "fpr": 1.0,
+            "mean_prob_attack": 0.8119822144508362
+          }
+        },
+        "group_bucket": {
+          "low_rho_low_uncertainty": {
+            "benign_total": 90,
+            "fp": 2,
+            "fpr": 0.022222222222222223,
+            "mean_prob_attack": 0.3570780436197917
+          },
+          "low_rho_high_uncertainty": {
+            "benign_total": 95,
+            "fp": 16,
+            "fpr": 0.16842105263157894,
+            "mean_prob_attack": 0.38383696706671466
+          },
+          "high_rho_low_uncertainty": {
+            "benign_total": 70,
+            "fp": 1,
+            "fpr": 0.014285714285714285,
+            "mean_prob_attack": 0.35706961495535716
+          },
+          "high_rho_high_uncertainty": {
+            "benign_total": 92,
+            "fp": 53,
+            "fpr": 0.5760869565217391,
+            "mean_prob_attack": 0.4814417465873387
+          }
+        }
+      }
+    },
+    {
+      "protocol": "weak_topology_ood",
+      "seed": 33,
+      "method_a": {
+        "weak_bucket": {
+          "abstain": {
+            "benign_total": 110,
+            "fp": 69,
+            "fpr": 0.6272727272727273,
+            "mean_prob_attack": 0.33694731972434305
+          },
+          "weak_benign": {
+            "benign_total": 236,
+            "fp": 6,
+            "fpr": 0.025423728813559324,
+            "mean_prob_attack": 0.04760052794117039
+          },
+          "weak_attack": {
+            "benign_total": 1,
+            "fp": 1,
+            "fpr": 1.0,
+            "mean_prob_attack": 0.9707766175270081
+          }
+        },
+        "group_bucket": {
+          "low_rho_low_uncertainty": {
+            "benign_total": 90,
+            "fp": 3,
+            "fpr": 0.03333333333333333,
+            "mean_prob_attack": 0.04793915748596191
+          },
+          "low_rho_high_uncertainty": {
+            "benign_total": 95,
+            "fp": 17,
+            "fpr": 0.17894736842105263,
+            "mean_prob_attack": 0.11799078489604749
+          },
+          "high_rho_low_uncertainty": {
+            "benign_total": 70,
+            "fp": 3,
+            "fpr": 0.04285714285714286,
+            "mean_prob_attack": 0.046825684819902694
+          },
+          "high_rho_high_uncertainty": {
+            "benign_total": 92,
+            "fp": 53,
+            "fpr": 0.5760869565217391,
+            "mean_prob_attack": 0.3311658527540124
+          }
+        }
+      },
+      "method_b": {
+        "weak_bucket": {
+          "abstain": {
+            "benign_total": 110,
+            "fp": 74,
+            "fpr": 0.6727272727272727,
+            "mean_prob_attack": 0.36949858231977983
+          },
+          "weak_benign": {
+            "benign_total": 236,
+            "fp": 27,
+            "fpr": 0.11440677966101695,
+            "mean_prob_attack": 0.18107567803334382
+          },
+          "weak_attack": {
+            "benign_total": 1,
+            "fp": 1,
+            "fpr": 1.0,
+            "mean_prob_attack": 0.8264610171318054
+          }
+        },
+        "group_bucket": {
+          "low_rho_low_uncertainty": {
+            "benign_total": 90,
+            "fp": 17,
+            "fpr": 0.18888888888888888,
+            "mean_prob_attack": 0.18566373189290364
+          },
+          "low_rho_high_uncertainty": {
+            "benign_total": 95,
+            "fp": 18,
+            "fpr": 0.18947368421052632,
+            "mean_prob_attack": 0.22492005197625412
+          },
+          "high_rho_low_uncertainty": {
+            "benign_total": 70,
+            "fp": 10,
+            "fpr": 0.14285714285714285,
+            "mean_prob_attack": 0.18407094138009208
+          },
+          "high_rho_high_uncertainty": {
+            "benign_total": 92,
+            "fp": 57,
+            "fpr": 0.6195652173913043,
+            "mean_prob_attack": 0.36133753735086194
+          }
+        }
+      }
+    }
+  ],
+  "pooled": {
+    "weak_bucket": {
+      "abstain": {
+        "method_a": {
+          "benign_total": 2013,
+          "fp": 1158,
+          "fpr": 0.5752608047690015,
+          "mean_prob_attack": 0.36381225187981003
+        },
+        "method_b": {
+          "benign_total": 2013,
+          "fp": 1281,
+          "fpr": 0.6363636363636364,
+          "mean_prob_attack": 0.40303794720607555
+        },
+        "delta_fpr": -0.06110283159463481,
+        "delta_fp": -123,
+        "delta_mean_prob_attack": -0.03922569532626552
+      },
+      "weak_attack": {
+        "method_a": {
+          "benign_total": 6,
+          "fp": 6,
+          "fpr": 1.0,
+          "mean_prob_attack": 0.8533295492331187
+        },
+        "method_b": {
+          "benign_total": 6,
+          "fp": 6,
+          "fpr": 1.0,
+          "mean_prob_attack": 0.8210889597733816
+        },
+        "delta_fpr": 0.0,
+        "delta_fp": 0,
+        "delta_mean_prob_attack": 0.03224058945973707
+      },
+      "weak_benign": {
+        "method_a": {
+          "benign_total": 3366,
+          "fp": 47,
+          "fpr": 0.013963161021984551,
+          "mean_prob_attack": 0.20650119350839072
+        },
+        "method_b": {
+          "benign_total": 3366,
+          "fp": 144,
+          "fpr": 0.0427807486631016,
+          "mean_prob_attack": 0.22310186919894023
+        },
+        "delta_fpr": -0.02881758764111705,
+        "delta_fp": -97,
+        "delta_mean_prob_attack": -0.016600675690549516
+      }
+    },
+    "group_bucket": {
+      "high_rho_high_uncertainty": {
+        "method_a": {
+          "benign_total": 1812,
+          "fp": 1000,
+          "fpr": 0.5518763796909493,
+          "mean_prob_attack": 0.36145399000997314
+        },
+        "method_b": {
+          "benign_total": 1812,
+          "fp": 1104,
+          "fpr": 0.609271523178808,
+          "mean_prob_attack": 0.39912478760641407
+        },
+        "delta_fpr": -0.05739514348785868,
+        "delta_fp": -104,
+        "delta_mean_prob_attack": -0.03767079759644093
+      },
+      "high_rho_low_uncertainty": {
+        "method_a": {
+          "benign_total": 1047,
+          "fp": 18,
+          "fpr": 0.017191977077363897,
+          "mean_prob_attack": 0.2107135851039358
+        },
+        "method_b": {
+          "benign_total": 1047,
+          "fp": 78,
+          "fpr": 0.07449856733524356,
+          "mean_prob_attack": 0.22672592762434265
+        },
+        "delta_fpr": -0.05730659025787966,
+        "delta_fp": -60,
+        "delta_mean_prob_attack": -0.01601234252040684
+      },
+      "low_rho_high_uncertainty": {
+        "method_a": {
+          "benign_total": 1200,
+          "fp": 169,
+          "fpr": 0.14083333333333334,
+          "mean_prob_attack": 0.23424005031585693
+        },
+        "method_b": {
+          "benign_total": 1200,
+          "fp": 192,
+          "fpr": 0.16,
+          "mean_prob_attack": 0.2561573012669881
+        },
+        "delta_fpr": -0.019166666666666665,
+        "delta_fp": -23,
+        "delta_mean_prob_attack": -0.021917250951131173
+      },
+      "low_rho_low_uncertainty": {
+        "method_a": {
+          "benign_total": 1326,
+          "fp": 24,
+          "fpr": 0.01809954751131222,
+          "mean_prob_attack": 0.2080673024305571
+        },
+        "method_b": {
+          "benign_total": 1326,
+          "fp": 57,
+          "fpr": 0.042986425339366516,
+          "mean_prob_attack": 0.22565452329713295
+        },
+        "delta_fpr": -0.024886877828054297,
+        "delta_fp": -33,
+        "delta_mean_prob_attack": -0.017587220866575853
+      }
+    }
+  },
+  "per_protocol": {
+    "label_prior_shift_ood": {
+      "weak_bucket": {
+        "abstain": {
+          "method_a": {
+            "benign_total": 831,
+            "fp": 474,
+            "fpr": 0.5703971119133574,
+            "mean_prob_attack": 0.3841007108722783
+          },
+          "method_b": {
+            "benign_total": 831,
+            "fp": 516,
+            "fpr": 0.6209386281588448,
+            "mean_prob_attack": 0.4190273170149857
+          },
+          "delta_fpr": -0.05054151624548742,
+          "delta_fp": -42,
+          "delta_mean_prob_attack": -0.03492660614270737
+        },
+        "weak_attack": {
+          "method_a": {
+            "benign_total": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.0
+          },
+          "method_b": {
+            "benign_total": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.0
+          },
+          "delta_fpr": 0.0,
+          "delta_fp": 0,
+          "delta_mean_prob_attack": 0.0
+        },
+        "weak_benign": {
+          "method_a": {
+            "benign_total": 1431,
+            "fp": 27,
+            "fpr": 0.018867924528301886,
+            "mean_prob_attack": 0.24016125063892846
+          },
+          "method_b": {
+            "benign_total": 1431,
+            "fp": 56,
+            "fpr": 0.039133473095737246,
+            "mean_prob_attack": 0.2500127263205773
+          },
+          "delta_fpr": -0.02026554856743536,
+          "delta_fp": -29,
+          "delta_mean_prob_attack": -0.009851475681648847
+        }
+      },
+      "group_bucket": {
+        "high_rho_high_uncertainty": {
+          "method_a": {
+            "benign_total": 777,
+            "fp": 428,
+            "fpr": 0.5508365508365508,
+            "mean_prob_attack": 0.38010794346243565
+          },
+          "method_b": {
+            "benign_total": 777,
+            "fp": 460,
+            "fpr": 0.592020592020592,
+            "mean_prob_attack": 0.41400455784153295
+          },
+          "delta_fpr": -0.041184041184041176,
+          "delta_fp": -32,
+          "delta_mean_prob_attack": -0.0338966143790973
+        },
+        "high_rho_low_uncertainty": {
+          "method_a": {
+            "benign_total": 420,
+            "fp": 13,
+            "fpr": 0.030952380952380953,
+            "mean_prob_attack": 0.24508663132077171
+          },
+          "method_b": {
+            "benign_total": 420,
+            "fp": 33,
+            "fpr": 0.07857142857142857,
+            "mean_prob_attack": 0.25647833006722587
+          },
+          "delta_fpr": -0.047619047619047616,
+          "delta_fp": -20,
+          "delta_mean_prob_attack": -0.011391698746454154
+        },
+        "low_rho_high_uncertainty": {
+          "method_a": {
+            "benign_total": 468,
+            "fp": 50,
+            "fpr": 0.10683760683760683,
+            "mean_prob_attack": 0.2584682652074048
+          },
+          "method_b": {
+            "benign_total": 468,
+            "fp": 60,
+            "fpr": 0.1282051282051282,
+            "mean_prob_attack": 0.2716980958596254
+          },
+          "delta_fpr": -0.02136752136752136,
+          "delta_fp": -10,
+          "delta_mean_prob_attack": -0.013229830652220609
+        },
+        "low_rho_low_uncertainty": {
+          "method_a": {
+            "benign_total": 597,
+            "fp": 10,
+            "fpr": 0.01675041876046901,
+            "mean_prob_attack": 0.2405612121275322
+          },
+          "method_b": {
+            "benign_total": 597,
+            "fp": 19,
+            "fpr": 0.031825795644891124,
+            "mean_prob_attack": 0.25028940421252993
+          },
+          "delta_fpr": -0.015075376884422113,
+          "delta_fp": -9,
+          "delta_mean_prob_attack": -0.009728192084997728
+        }
+      }
+    },
+    "weak_attack_strategy_ood": {
+      "weak_bucket": {
+        "abstain": {
+          "method_a": {
+            "benign_total": 330,
+            "fp": 196,
+            "fpr": 0.593939393939394,
+            "mean_prob_attack": 0.34676896875554863
+          },
+          "method_b": {
+            "benign_total": 330,
+            "fp": 193,
+            "fpr": 0.5848484848484848,
+            "mean_prob_attack": 0.37464789188269415
+          },
+          "delta_fpr": 0.00909090909090915,
+          "delta_fp": 3,
+          "delta_mean_prob_attack": -0.027878923127145516
+        },
+        "weak_attack": {
+          "method_a": {
+            "benign_total": 3,
+            "fp": 3,
+            "fpr": 1.0,
+            "mean_prob_attack": 0.8320728143056234
+          },
+          "method_b": {
+            "benign_total": 3,
+            "fp": 3,
+            "fpr": 1.0,
+            "mean_prob_attack": 0.8200576901435852
+          },
+          "delta_fpr": 0.0,
+          "delta_fp": 0,
+          "delta_mean_prob_attack": 0.012015124162038204
+        },
+        "weak_benign": {
+          "method_a": {
+            "benign_total": 708,
+            "fp": 6,
+            "fpr": 0.00847457627118644,
+            "mean_prob_attack": 0.184949624336372
+          },
+          "method_b": {
+            "benign_total": 708,
+            "fp": 7,
+            "fpr": 0.009887005649717515,
+            "mean_prob_attack": 0.2016568264718783
+          },
+          "delta_fpr": -0.0014124293785310743,
+          "delta_fp": -1,
+          "delta_mean_prob_attack": -0.016707202135506305
+        }
+      },
+      "group_bucket": {
+        "high_rho_high_uncertainty": {
+          "method_a": {
+            "benign_total": 255,
+            "fp": 153,
+            "fpr": 0.6,
+            "mean_prob_attack": 0.3557573580274395
+          },
+          "method_b": {
+            "benign_total": 255,
+            "fp": 152,
+            "fpr": 0.596078431372549,
+            "mean_prob_attack": 0.38285981720569084
+          },
+          "delta_fpr": 0.0039215686274509665,
+          "delta_fp": 1,
+          "delta_mean_prob_attack": -0.027102459178251326
+        },
+        "high_rho_low_uncertainty": {
+          "method_a": {
+            "benign_total": 210,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.18652031194596064
+          },
+          "method_b": {
+            "benign_total": 210,
+            "fp": 2,
+            "fpr": 0.009523809523809525,
+            "mean_prob_attack": 0.20397022792271205
+          },
+          "delta_fpr": -0.009523809523809525,
+          "delta_fp": -2,
+          "delta_mean_prob_attack": -0.017449915976751412
+        },
+        "low_rho_high_uncertainty": {
+          "method_a": {
+            "benign_total": 291,
+            "fp": 46,
+            "fpr": 0.15807560137457044,
+            "mean_prob_attack": 0.22151951937331366
+          },
+          "method_b": {
+            "benign_total": 291,
+            "fp": 44,
+            "fpr": 0.15120274914089346,
+            "mean_prob_attack": 0.23990526232113132
+          },
+          "delta_fpr": 0.006872852233676979,
+          "delta_fp": 2,
+          "delta_mean_prob_attack": -0.018385742947817668
+        },
+        "low_rho_low_uncertainty": {
+          "method_a": {
+            "benign_total": 285,
+            "fp": 6,
+            "fpr": 0.021052631578947368,
+            "mean_prob_attack": 0.18780610937821238
+          },
+          "method_b": {
+            "benign_total": 285,
+            "fp": 5,
+            "fpr": 0.017543859649122806,
+            "mean_prob_attack": 0.2055844976190935
+          },
+          "delta_fpr": 0.003508771929824562,
+          "delta_fp": 1,
+          "delta_mean_prob_attack": -0.017778388240881127
+        }
+      }
+    },
+    "weak_temporal_ood": {
+      "weak_bucket": {
+        "abstain": {
+          "method_a": {
+            "benign_total": 522,
+            "fp": 295,
+            "fpr": 0.5651340996168582,
+            "mean_prob_attack": 0.3489201790528279
+          },
+          "method_b": {
+            "benign_total": 522,
+            "fp": 360,
+            "fpr": 0.6896551724137931,
+            "mean_prob_attack": 0.40074013019430227
+          },
+          "delta_fpr": -0.12452107279693492,
+          "delta_fp": -65,
+          "delta_mean_prob_attack": -0.05181995114147436
+        },
+        "weak_attack": {
+          "method_a": {
+            "benign_total": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.0
+          },
+          "method_b": {
+            "benign_total": 0,
+            "fp": 0,
+            "fpr": 0.0,
+            "mean_prob_attack": 0.0
+          },
+          "delta_fpr": 0.0,
+          "delta_fp": 0,
+          "delta_mean_prob_attack": 0.0
+        },
+        "weak_benign": {
+          "method_a": {
+            "benign_total": 519,
+            "fp": 5,
+            "fpr": 0.009633911368015413,
+            "mean_prob_attack": 0.23135050367528073
+          },
+          "method_b": {
+            "benign_total": 519,
+            "fp": 42,
+            "fpr": 0.08092485549132948,
+            "mean_prob_attack": 0.20599173029493503
+          },
+          "delta_fpr": -0.07129094412331406,
+          "delta_fp": -37,
+          "delta_mean_prob_attack": 0.0253587733803457
+        }
+      },
+      "group_bucket": {
+        "high_rho_high_uncertainty": {
+          "method_a": {
+            "benign_total": 504,
+            "fp": 268,
+            "fpr": 0.5317460317460317,
+            "mean_prob_attack": 0.3427322856963627
+          },
+          "method_b": {
+            "benign_total": 504,
+            "fp": 328,
+            "fpr": 0.6507936507936508,
+            "mean_prob_attack": 0.39116309937976657
+          },
+          "delta_fpr": -0.11904761904761907,
+          "delta_fp": -60,
+          "delta_mean_prob_attack": -0.04843081368340385
+        },
+        "high_rho_low_uncertainty": {
+          "method_a": {
+            "benign_total": 207,
+            "fp": 2,
+            "fpr": 0.00966183574879227,
+            "mean_prob_attack": 0.23536015478309225
+          },
+          "method_b": {
+            "benign_total": 207,
+            "fp": 27,
+            "fpr": 0.13043478260869565,
+            "mean_prob_attack": 0.21131456531764228
+          },
+          "delta_fpr": -0.12077294685990338,
+          "delta_fp": -25,
+          "delta_mean_prob_attack": 0.024045589465449962
+        },
+        "low_rho_high_uncertainty": {
+          "method_a": {
+            "benign_total": 156,
+            "fp": 28,
+            "fpr": 0.1794871794871795,
+            "mean_prob_attack": 0.2608407460726224
+          },
+          "method_b": {
+            "benign_total": 156,
+            "fp": 37,
+            "fpr": 0.23717948717948717,
+            "mean_prob_attack": 0.25492399778121555
+          },
+          "delta_fpr": -0.05769230769230768,
+          "delta_fp": -9,
+          "delta_mean_prob_attack": 0.00591674829140687
+        },
+        "low_rho_low_uncertainty": {
+          "method_a": {
+            "benign_total": 174,
+            "fp": 2,
+            "fpr": 0.011494252873563218,
+            "mean_prob_attack": 0.23022678528708973
+          },
+          "method_b": {
+            "benign_total": 174,
+            "fp": 10,
+            "fpr": 0.05747126436781609,
+            "mean_prob_attack": 0.20367584831413182
+          },
+          "delta_fpr": -0.04597701149425287,
+          "delta_fp": -8,
+          "delta_mean_prob_attack": 0.026550936972957906
+        }
+      }
+    },
+    "weak_topology_ood": {
+      "weak_bucket": {
+        "abstain": {
+          "method_a": {
+            "benign_total": 330,
+            "fp": 193,
+            "fpr": 0.5848484848484848,
+            "mean_prob_attack": 0.3533220580129912
+          },
+          "method_b": {
+            "benign_total": 330,
+            "fp": 212,
+            "fpr": 0.6424242424242425,
+            "mean_prob_attack": 0.3947985909201882
+          },
+          "delta_fpr": -0.05757575757575761,
+          "delta_fp": -19,
+          "delta_mean_prob_attack": -0.041476532907196995
+        },
+        "weak_attack": {
+          "method_a": {
+            "benign_total": 3,
+            "fp": 3,
+            "fpr": 1.0,
+            "mean_prob_attack": 0.874586284160614
+          },
+          "method_b": {
+            "benign_total": 3,
+            "fp": 3,
+            "fpr": 1.0,
+            "mean_prob_attack": 0.8221202294031779
+          },
+          "delta_fpr": 0.0,
+          "delta_fp": 0,
+          "delta_mean_prob_attack": 0.052466054757436154
+        },
+        "weak_benign": {
+          "method_a": {
+            "benign_total": 708,
+            "fp": 9,
+            "fpr": 0.012711864406779662,
+            "mean_prob_attack": 0.14180370373914472
+          },
+          "method_b": {
+            "benign_total": 708,
+            "fp": 39,
+            "fpr": 0.05508474576271186,
+            "mean_prob_attack": 0.20269765422842598
+          },
+          "delta_fpr": -0.0423728813559322,
+          "delta_fp": -30,
+          "delta_mean_prob_attack": -0.06089395048928126
+        }
+      },
+      "group_bucket": {
+        "high_rho_high_uncertainty": {
+          "method_a": {
+            "benign_total": 276,
+            "fp": 151,
+            "fpr": 0.5471014492753623,
+            "mean_prob_attack": 0.3483897084775178
+          },
+          "method_b": {
+            "benign_total": 276,
+            "fp": 164,
+            "fpr": 0.5942028985507246,
+            "mean_prob_attack": 0.38680115298948425
+          },
+          "delta_fpr": -0.047101449275362306,
+          "delta_fp": -13,
+          "delta_mean_prob_attack": -0.03841144451196643
+        },
+        "high_rho_low_uncertainty": {
+          "method_a": {
+            "benign_total": 210,
+            "fp": 3,
+            "fpr": 0.014285714285714285,
+            "mean_prob_attack": 0.14186629000164214
+          },
+          "method_b": {
+            "benign_total": 210,
+            "fp": 16,
+            "fpr": 0.0761904761904762,
+            "mean_prob_attack": 0.2051680224282401
+          },
+          "delta_fpr": -0.061904761904761914,
+          "delta_fp": -13,
+          "delta_mean_prob_attack": -0.06330173242659795
+        },
+        "low_rho_high_uncertainty": {
+          "method_a": {
+            "benign_total": 285,
+            "fp": 45,
+            "fpr": 0.15789473684210525,
+            "mean_prob_attack": 0.19288272188420882
+          },
+          "method_b": {
+            "benign_total": 285,
+            "fp": 51,
+            "fpr": 0.17894736842105263,
+            "mean_prob_attack": 0.24790693918863932
+          },
+          "delta_fpr": -0.02105263157894738,
+          "delta_fp": -6,
+          "delta_mean_prob_attack": -0.055024217304430495
+        },
+        "low_rho_low_uncertainty": {
+          "method_a": {
+            "benign_total": 270,
+            "fp": 6,
+            "fpr": 0.022222222222222223,
+            "mean_prob_attack": 0.14332591692606608
+          },
+          "method_b": {
+            "benign_total": 270,
+            "fp": 23,
+            "fpr": 0.08518518518518518,
+            "mean_prob_attack": 0.20653312647784197
+          },
+          "delta_fpr": -0.06296296296296296,
+          "delta_fp": -17,
+          "delta_mean_prob_attack": -0.06320720955177589
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,242 @@
+{
+  "best_epoch": 1,
+  "best_val_f1": 0.8908122503328896,
+  "best_threshold_raw": 0.44999998807907104,
+  "best_threshold": 0.44999998807907104,
+  "eval_temperature": 1.0,
+  "temperature_scaling": {
+    "enabled": false,
+    "temperature": 1.0,
+    "val_nll_raw": 0.0,
+    "val_nll_calibrated": 0.0,
+    "val_ece_raw": 0.0,
+    "val_ece_calibrated": 0.0,
+    "val_brier_raw": 0.0,
+    "val_brier_calibrated": 0.0,
+    "val_threshold_raw": 0.44999998807907104,
+    "val_threshold_calibrated": 0.44999998807907104,
+    "val_f1_raw": 0.8908122503328896,
+    "val_f1_calibrated": 0.8908122503328896
+  },
+  "final_eval_raw": {
+    "train": {
+      "accuracy": 0.8452993768626389,
+      "precision": 0.9057522123893805,
+      "recall": 0.8511434511434511,
+      "f1": 0.877599142550911,
+      "fpr": 0.1656298600311042,
+      "ece": 0.1886160671710968,
+      "brier": 0.15468934178352356,
+      "tp": 2047,
+      "fp": 213,
+      "fn": 358,
+      "tn": 1073,
+      "threshold": 0.44999998807907104,
+      "temperature": 1.0
+    },
+    "val": {
+      "accuracy": 0.8618365627632687,
+      "precision": 0.91268758526603,
+      "recall": 0.8699609882964889,
+      "f1": 0.8908122503328896,
+      "fpr": 0.15311004784688995,
+      "ece": 0.20874059200286865,
+      "brier": 0.1486417055130005,
+      "tp": 669,
+      "fp": 64,
+      "fn": 100,
+      "tn": 354,
+      "threshold": 0.44999998807907104,
+      "temperature": 1.0
+    },
+    "test_random": {
+      "accuracy": 0.8960802187784868,
+      "precision": 0.9104477611940298,
+      "recall": 0.9186746987951807,
+      "f1": 0.9145427286356821,
+      "fpr": 0.13856812933025403,
+      "ece": 0.2505095899105072,
+      "brier": 0.13745400309562683,
+      "tp": 610,
+      "fp": 60,
+      "fn": 54,
+      "tn": 373,
+      "threshold": 0.44999998807907104,
+      "temperature": 1.0
+    },
+    "test_temporal": {
+      "accuracy": 0.8960802187784868,
+      "precision": 0.9104477611940298,
+      "recall": 0.9186746987951807,
+      "f1": 0.9145427286356821,
+      "fpr": 0.13856812933025403,
+      "ece": 0.2505095899105072,
+      "brier": 0.13745400309562683,
+      "tp": 610,
+      "fp": 60,
+      "fn": 54,
+      "tn": 373,
+      "threshold": 0.44999998807907104,
+      "temperature": 1.0
+    }
+  },
+  "final_eval": {
+    "train": {
+      "accuracy": 0.8452993768626389,
+      "precision": 0.9057522123893805,
+      "recall": 0.8511434511434511,
+      "f1": 0.877599142550911,
+      "fpr": 0.1656298600311042,
+      "ece": 0.1886160671710968,
+      "brier": 0.15468934178352356,
+      "tp": 2047,
+      "fp": 213,
+      "fn": 358,
+      "tn": 1073,
+      "threshold": 0.44999998807907104,
+      "temperature": 1.0
+    },
+    "val": {
+      "accuracy": 0.8618365627632687,
+      "precision": 0.91268758526603,
+      "recall": 0.8699609882964889,
+      "f1": 0.8908122503328896,
+      "fpr": 0.15311004784688995,
+      "ece": 0.20874059200286865,
+      "brier": 0.1486417055130005,
+      "tp": 669,
+      "fp": 64,
+      "fn": 100,
+      "tn": 354,
+      "threshold": 0.44999998807907104,
+      "temperature": 1.0
+    },
+    "test_random": {
+      "accuracy": 0.8960802187784868,
+      "precision": 0.9104477611940298,
+      "recall": 0.9186746987951807,
+      "f1": 0.9145427286356821,
+      "fpr": 0.13856812933025403,
+      "ece": 0.2505095899105072,
+      "brier": 0.13745400309562683,
+      "tp": 610,
+      "fp": 60,
+      "fn": 54,
+      "tn": 373,
+      "threshold": 0.44999998807907104,
+      "temperature": 1.0
+    },
+    "test_temporal": {
+      "accuracy": 0.8960802187784868,
+      "precision": 0.9104477611940298,
+      "recall": 0.9186746987951807,
+      "f1": 0.9145427286356821,
+      "fpr": 0.13856812933025403,
+      "ece": 0.2505095899105072,
+      "brier": 0.13745400309562683,
+      "tp": 610,
+      "fp": 60,
+      "fn": 54,
+      "tn": 373,
+      "threshold": 0.44999998807907104,
+      "temperature": 1.0
+    }
+  },
+  "group_names": {
+    "0": "low_rho_low_uncertainty",
+    "1": "low_rho_high_uncertainty",
+    "2": "high_rho_low_uncertainty",
+    "3": "high_rho_high_uncertainty"
+  },
+  "group_thresholds": {
+    "uncertainty_mid": 0.8068378567695618,
+    "rho_mid": 24.517658233642578
+  },
+  "prior_stats": {
+    "source_prior": [
+      0.5093448162078857,
+      0.49065521359443665
+    ],
+    "target_prior": [
+      0.5188516974449158,
+      0.48114830255508423
+    ]
+  },
+  "history": {
+    "train_loss": [
+      0.7348109483718872,
+      0.5566137433052063,
+      0.42367562651634216,
+      0.3572828769683838,
+      0.3371962606906891
+    ],
+    "val_f1": [
+      0.8908122503328896,
+      0.8884381338742393,
+      0.8759221998658618,
+      0.8561827956989247,
+      0.8417596848325674
+    ],
+    "val_ece": [
+      0.20874059200286865,
+      0.10528281331062317,
+      0.08465254306793213,
+      0.10891691595315933,
+      0.14736950397491455
+    ],
+    "val_threshold": [
+      0.44999998807907104,
+      0.3999999761581421,
+      0.29999998211860657,
+      0.19999998807907104,
+      0.09999999403953552
+    ],
+    "base_loss": [
+      0.7325035333633423,
+      0.555026650428772,
+      0.4199528992176056,
+      0.34951603412628174,
+      0.3267553150653839
+    ],
+    "dro_loss": [
+      0.7371183633804321,
+      0.5582008361816406,
+      0.42739835381507874,
+      0.3650497496128082,
+      0.34763720631599426
+    ]
+  },
+  "runtime_sec": 0.5504028797149658,
+  "config": {
+    "graph_file": "/home/user/FedSTGCN/cdro_suite/main_baselineplus_s3_v1/protocol_graphs/weak_topology_ood.pt",
+    "method": "cdro_ug_priorcorr",
+    "hidden_dim": 64,
+    "heads": 4,
+    "dropout": 0.3,
+    "lr": 0.005,
+    "weight_decay": 0.0005,
+    "epochs": 10,
+    "patience": 4,
+    "lambda_dro": 0.5,
+    "ug_temperature": 0.35,
+    "ug_priority_loss_scale": 1.0,
+    "ug_uncertainty_scale": 0.2,
+    "ug_disagreement_scale": 0.1,
+    "ug_sample_weight_scale": 0.0,
+    "posthoc_temperature_scaling": false,
+    "temp_scale_min": 0.5,
+    "temp_scale_max": 5.0,
+    "temp_scale_steps": 31,
+    "seed": 33,
+    "force_cpu": true,
+    "physics_context": false,
+    "capacity": 120000.0,
+    "train_supervised_nodes": 1513,
+    "target_meta": {
+      "covered_train_nodes": 1513,
+      "pseudo_attack_nodes": 0,
+      "pseudo_benign_nodes": 0,
+      "effective_train_nodes": 1513
+    }
+  }
+}
