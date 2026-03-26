@@ -2,6 +2,8 @@
 
 This repository is the reviewer-facing reproducibility release for the `CDRO-UG` conditional-shift experiments built on the FedSTGCN codebase. The release now supports full replay of the paper-aligned `main` and `external-J` suites from released processed protocol graphs, and local validation on 2026-03-26 reproduced all 96 runs with `max_metric_delta = 0.0` and `max_threshold_delta = 0.0`.
 
+The official review path starts from released processed artifacts rather than private raw-capture regeneration.
+
 ## Repository Navigation & Artifact Mapping
 
 | Path | What it contains | Reviewer usage |
@@ -30,6 +32,28 @@ The commands below assume a Linux or WSL environment. In the local validation pa
 ```bash
 PYTHON_BIN=/home/user/miniconda3/envs/DL/bin/python
 ```
+
+## GitHub Release Mirrors
+
+For reviewers who prefer downloading a compact mirror instead of cloning the full repository tree, the matching release assets are published under GitHub Releases.
+
+Release assets:
+
+- `FedSTGCN-CDRO-paper-aligned-suites-v1.tar.gz`
+  - paper-aligned `main_rewrite_sw0_s5_v1` and `batch2_rewrite_sw0_s3_v2`
+  - reviewer replay scripts and role manifests
+  - core paper-ready tables and pooled-results figure
+- `FedSTGCN-CDRO-baselineplus-supplement-v1.tar.gz`
+  - supplementary `baselineplus` suites for audit / ablation support
+- `SHA256SUMS.txt`
+  - checksum file for the two archives
+
+SHA-256:
+
+- `FedSTGCN-CDRO-paper-aligned-suites-v1.tar.gz`
+  - `747a87bea6d68cdee0b9d2e89eb37d47eb7cdb7385048654067fb22bec856ab9`
+- `FedSTGCN-CDRO-baselineplus-supplement-v1.tar.gz`
+  - `055c8668674781e210db6eb34e9d900a08ff7374bf2f1f90502fc16fd2a6837a`
 
 ## Complete Reviewer Replay
 

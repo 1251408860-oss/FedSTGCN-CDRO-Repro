@@ -2,6 +2,8 @@
 
 This document is the reviewer-facing command reference for the released `CDRO-UG` artifact.
 
+The official review path starts from released processed artifacts rather than private raw-capture regeneration.
+
 ## 1. Recommended Environment
 
 Use the same environment family as the original experiments.
@@ -92,3 +94,14 @@ Not released:
 - Private source base graphs before protocol-graph preparation
 
 The artifact therefore begins from the processed graph stage, but the published paper numbers are fully replayable from the released bundle.
+
+## 6. Release Mirrors And Checksums
+
+The same replay bundles are also attached to the GitHub Release for convenient download.
+
+- `FedSTGCN-CDRO-paper-aligned-suites-v1.tar.gz`
+  - `747a87bea6d68cdee0b9d2e89eb37d47eb7cdb7385048654067fb22bec856ab9`
+- `FedSTGCN-CDRO-baselineplus-supplement-v1.tar.gz`
+  - `055c8668674781e210db6eb34e9d900a08ff7374bf2f1f90502fc16fd2a6837a`
+- `SHA256SUMS.txt`
+  - contains the same checksums in machine-readable form
