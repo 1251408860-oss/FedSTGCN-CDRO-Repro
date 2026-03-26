@@ -1,119 +1,37 @@
-﻿# FedSTGCN-CDRO-Repro
+# FedSTGCN-CDRO-Repro
 
-This repository is the reviewer-facing reproducibility release for the `CDRO-UG` conditional-shift experiments built on the FedSTGCN codebase. The release now supports full replay of the paper-aligned `main` and `external-J` suites from released processed protocol graphs, and local validation on 2026-03-26 reproduced all 96 runs with `max_metric_delta = 0.0` and `max_threshold_delta = 0.0`.
+This repository is the reviewer-facing reproducibility release for the `CDRO-UG` conditional-shift experiments built on the FedSTGCN codebase. The official review path starts from released processed artifacts rather than private raw-capture regeneration. For the paper-aligned `main` and `external-J` suites, the released replay pipeline has already been validated locally on March 26, 2026, with `runs_compared = 96`, `core_table_exact_match = true`, `deployment_table_exact_match = true`, `max_metric_delta = 0.0`, and `max_threshold_delta = 0.0`.
 
-The official review path starts from released processed artifacts rather than private raw-capture regeneration.
+| Path | Role in the release |
+| --- | --- |
+| `repro/run_review_artifact.sh` | one-command reviewer entry point |
+| `repro/review_artifact.py` | replay and verification pipeline |
+| `REPRODUCIBILITY.md` | exact replay contract, outputs, and boundaries |
+| `cdro_suite/main_rewrite_sw0_s5_v1/` | paper-aligned main-batch suite |
+| `cdro_suite/batch2_rewrite_sw0_s3_v2/` | paper-aligned external-J suite |
+| `cdro_suite/paper_ready_plus/` | checked-in paper tables and figures used for comparison |
+| `cdro_suite/main_baselineplus_s3_v1/` | supplementary baselineplus main suite |
+| `cdro_suite/batch2_baselineplus_s3_v1/` | supplementary baselineplus external suite |
+| `cdro_suite/repro_package_v1/` | lightweight schema and manifest package |
 
-## Repository Navigation & Artifact Mapping
+The intended environment is the same PyTorch/PyG environment used in the original experiments. The repository keeps both the conda export and lock-style requirements files at `repro/environment-lock-dl.yml` and `repro/requirements-lock-dl.txt`; in local verification the replay command was executed with `PYTHON_BIN=/home/user/miniconda3/envs/DL/bin/python`.
 
-| Path | What it contains | Reviewer usage |
-| --- | --- | --- |
-| `repro/run_review_artifact.sh` | One-command reviewer entry point | Full replay or quick verification |
-| `repro/review_artifact.py` | Replay / verification pipeline | Regenerates the core tables and figure |
-| `REPRODUCIBILITY.md` | Exact commands, outputs, and expectations | Start here for artifact evaluation |
-| `cdro_suite/main_rewrite_sw0_s5_v1/` | Paper-aligned main-batch suite | Replayed by default |
-| `cdro_suite/batch2_rewrite_sw0_s3_v2/` | Paper-aligned external-J suite | Replayed by default |
-| `cdro_suite/paper_ready_plus/` | Paper-ready tables, figures, and manuscript assets | Reference outputs for comparison |
-| `cdro_suite/main_baselineplus_s3_v1/` | Supplementary baselineplus main suite | Extra audit / ablation support |
-| `cdro_suite/batch2_baselineplus_s3_v1/` | Supplementary baselineplus external suite | Extra audit / ablation support |
-| `cdro_suite/repro_package_v1/` | Lightweight schema + manifest package | Fast structure review |
-| `biblio_us17/` | Public benchmark helper materials | Public-benchmark sanity path |
-
-## Global Environment Overview
-
-Recommended replay environment:
-
-- Python with `torch`, `torch_geometric`, `numpy`, and `matplotlib`
-- The original project environment file is kept at `repro/environment-lock-dl.yml`
-- The lockfile mirror is kept at `repro/requirements-lock-dl.txt`
-
-The commands below assume a Linux or WSL environment. In the local validation pass, the replay was executed with:
-
-```bash
-PYTHON_BIN=/home/user/miniconda3/envs/DL/bin/python
-```
-
-## GitHub Release Mirrors
-
-For reviewers who prefer downloading a compact mirror instead of cloning the full repository tree, the matching release assets are published under GitHub Releases.
-
-Release assets:
-
-- `FedSTGCN-CDRO-paper-aligned-suites-v1.tar.gz`
-  - paper-aligned `main_rewrite_sw0_s5_v1` and `batch2_rewrite_sw0_s3_v2`
-  - reviewer replay scripts and role manifests
-  - core paper-ready tables and pooled-results figure
-- `FedSTGCN-CDRO-baselineplus-supplement-v1.tar.gz`
-  - supplementary `baselineplus` suites for audit / ablation support
-- `SHA256SUMS.txt`
-  - checksum file for the two archives
-
-SHA-256:
-
-- `FedSTGCN-CDRO-paper-aligned-suites-v1.tar.gz`
-  - `747a87bea6d68cdee0b9d2e89eb37d47eb7cdb7385048654067fb22bec856ab9`
-- `FedSTGCN-CDRO-baselineplus-supplement-v1.tar.gz`
-  - `055c8668674781e210db6eb34e9d900a08ff7374bf2f1f90502fc16fd2a6837a`
-
-## Complete Reviewer Replay
-
-Run the full paper-aligned replay:
+The full reviewer replay is:
 
 ```bash
 PYTHON_BIN=/home/user/miniconda3/envs/DL/bin/python bash repro/run_review_artifact.sh
 ```
 
-This command:
+This command replays the released `main_rewrite_sw0_s5_v1` and `batch2_rewrite_sw0_s3_v2` suites from `protocol_graphs/*.pt`, rebuilds the paired significance summaries, regenerates the core main-text tables and pooled-results figure, and checks the regenerated core tables against the references in `cdro_suite/paper_ready_plus/`. The main outputs are written under `review_artifact/rerun/`, with the final verification summary stored in `review_artifact/rerun/repro_report.json` and `review_artifact/rerun/REPRO_SUMMARY.md`.
 
-1. Replays all runs in `main_rewrite_sw0_s5_v1`
-2. Replays all runs in `batch2_rewrite_sw0_s3_v2`
-3. Regenerates paired significance summaries
-4. Rebuilds the paper core tables
-5. Rebuilds the pooled-results figure
-6. Verifies the regenerated tables against `cdro_suite/paper_ready_plus/`
-
-Expected outputs:
-
-- `review_artifact/rerun/replayed_suites/main_rewrite_sw0_s5_v1/cdro_summary.json`
-- `review_artifact/rerun/replayed_suites/batch2_rewrite_sw0_s3_v2/cdro_summary.json`
-- `review_artifact/rerun/paper_ready/table_maintext_core_results.csv`
-- `review_artifact/rerun/paper_ready/table_maintext_deployment_transfer.csv`
-- `review_artifact/rerun/paper_ready/fig1_pooled_results.png`
-- `review_artifact/rerun/repro_report.json`
-- `review_artifact/rerun/REPRO_SUMMARY.md`
-
-Expected report fields:
-
-- `core_table_exact_match: true`
-- `deployment_table_exact_match: true`
-- `result_comparison.runs_compared: 96`
-- `result_comparison.max_metric_delta: 0.0`
-- `result_comparison.max_threshold_delta: 0.0`
-
-## Quick Verification Without Retraining
-
-If a reviewer only wants to rebuild the tables from the released run artifacts:
+If a reviewer only wants to verify the released run artifacts without retraining, the quick path is:
 
 ```bash
 PYTHON_BIN=/home/user/miniconda3/envs/DL/bin/python bash repro/run_review_artifact.sh --skip-rerun
 ```
 
-This writes outputs under `review_artifact/reference/` and verifies the checked-in core tables without rerunning training.
+That path writes its outputs under `review_artifact/reference/` and checks the checked-in core tables directly.
 
-## Scope of Release
+For reviewers who prefer a compact download instead of cloning the full repository tree, the same material is mirrored in the GitHub Release at <https://github.com/1251408860-oss/FedSTGCN-CDRO-Repro/releases/tag/review-artifact-v1>. The paper-aligned bundle is `FedSTGCN-CDRO-paper-aligned-suites-v1.tar.gz` with SHA-256 `747a87bea6d68cdee0b9d2e89eb37d47eb7cdb7385048654067fb22bec856ab9`, and the supplementary audit bundle is `FedSTGCN-CDRO-baselineplus-supplement-v1.tar.gz` with SHA-256 `055c8668674781e210db6eb34e9d900a08ff7374bf2f1f90502fc16fd2a6837a`. The corresponding machine-readable checksum file is `SHA256SUMS.txt`.
 
-Included:
-
-- Paper-aligned processed protocol graphs
-- Weak-label sidecars
-- Reference run outputs
-- Reviewer replay scripts
-- Paper-ready tables and figures
-
-Not included:
-
-- Raw private PCAPs
-- Private source base graphs used before the released protocol-graph stage
-- Mininet recapture workflow for private data regeneration
-
-The public release therefore starts from processed protocol graphs, but the reported paper numbers are fully replayable from those released artifacts.
+This public release includes processed protocol graphs, weak-label sidecars, reference run outputs, reviewer replay scripts, and the paper-facing tables and figures needed to reproduce the reported results. It does not include raw private PCAPs, unreleased pre-graph base captures, or the private-data recapture workflow. The release boundary is therefore the processed-graph stage, while the reported paper numbers are fully reproducible from the released artifacts inside that boundary.
