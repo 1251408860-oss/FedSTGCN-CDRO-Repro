@@ -17,7 +17,6 @@ This repository is split into a small reviewer-facing surface and a larger prese
 - `training/`: PI-GNN, CDRO, federated, and tabular/XGBoost training scripts.
 - `data_prep/`: graph building, weak-label generation, and protocol construction.
 - `pipelines/`: multi-stage experiment runners and orchestration helpers.
-- `tools/`: Mininet, traffic replay, and other operational utilities.
 
 ## Supporting material
 

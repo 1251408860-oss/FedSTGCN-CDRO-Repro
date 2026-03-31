@@ -621,8 +621,9 @@ def build_index() -> str:
             "# CDRO Paper Ready Plus Index",
             "",
             "- `MASTER_SUMMARY.md`: one-page summary of the paper-safe claims and the main mechanism readout.",
-            "- `FIGURE_CAPTIONS.md`: manuscript-ready figure captions and usage guidance.",
-            "- `TABLE_NOTES.md`: table captions, interpretation notes, and suggested placement.",
+            "- `SAFE_CLAIMS_AND_LIMITATIONS.md`: writing-safe claim boundaries and limitations guidance.",
+            "- `CONTRIBUTION_EVIDENCE_MAP.md`: reviewer-facing map from each contribution to evidence.",
+            "- `APPENDIX_REPRODUCIBILITY_TEXT.md`: ready-to-insert appendix text for artifact disclosure.",
             "",
             "Core tables:",
             "- `table1_main_results.csv`",
@@ -734,8 +735,6 @@ def main() -> None:
         build_master_summary(main_stats, batch2_stats, main_sig, batch2_sig, mech_main, mech_batch2, quality_main, quality_batch2),
     )
     write_text(out_dir / "INDEX.md", build_index())
-    write_text(out_dir / "FIGURE_CAPTIONS.md", build_figure_captions())
-    write_text(out_dir / "TABLE_NOTES.md", build_table_notes())
 
     manifest = {
         "root": str(root),

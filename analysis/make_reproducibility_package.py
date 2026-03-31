@@ -136,8 +136,8 @@ def main() -> None:
         "run_label_budget.sh": "set -e\n/home/user/miniconda3/envs/DL/bin/python /home/user/FedSTGCN/pipelines/run_cdro_budget_suite.py --force-cpu\n",
         "run_non_graph_clean.sh": "set -e\n/home/user/miniconda3/envs/DL/bin/python /home/user/FedSTGCN/pipelines/run_non_graph_clean_upper_suite.py --force-cpu\n",
         "run_deployment_checks.sh": "set -e\n/home/user/miniconda3/envs/DL/bin/python /home/user/FedSTGCN/analysis/make_deployment_artifacts.py\n",
-        "run_attack_family_breakdown.sh": "set -e\n/home/user/miniconda3/envs/DL/bin/python /home/user/FedSTGCN/make_attack_family_breakdown.py\n",
-        "run_analyst_case_studies.sh": "set -e\n/home/user/miniconda3/envs/DL/bin/python /home/user/FedSTGCN/make_analyst_case_studies.py\n",
+        "run_attack_family_breakdown.sh": "set -e\n/home/user/miniconda3/envs/DL/bin/python /home/user/FedSTGCN/analysis/make_attack_family_breakdown.py\n",
+        "run_analyst_case_studies.sh": "set -e\n/home/user/miniconda3/envs/DL/bin/python /home/user/FedSTGCN/analysis/make_analyst_case_studies.py\n",
         "run_reproducibility_package.sh": "set -e\n/home/user/miniconda3/envs/DL/bin/python /home/user/FedSTGCN/analysis/make_reproducibility_package.py\n",
     }
     for filename, body in script_map.items():

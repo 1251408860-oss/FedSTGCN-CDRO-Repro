@@ -532,40 +532,6 @@ def update_indexes(out_dir: Path) -> None:
             "- `fig8_stress_fpr.png`",
         ],
     )
-    append_lines_once(
-        out_dir / "FIGURE_CAPTIONS.md",
-        [
-            "",
-            "## Fig 6. Operating-point analysis",
-            "ROC and PR curves are pooled over the locked main methods on the main batch and batch2. The accompanying table reports FPR at 95% recall and recall at 1/5/10% FPR to support low-false-positive deployment claims.",
-            "",
-            "## Fig 7. Stress sweep F1 curves",
-            "Pooled F1 is plotted against weak-label flip ratio and weak-label drop ratio for the main batch and batch2. This figure is intended to show degradation trends rather than a single significance headline.",
-            "",
-            "## Fig 8. Stress sweep FPR curves",
-            "Pooled FPR is plotted against weak-label flip ratio and weak-label drop ratio. The key reviewer-facing readout is whether CDRO-UG degrades more slowly than Noisy-CE under harsher weak-label corruption.",
-        ],
-    )
-    append_lines_once(
-        out_dir / "TABLE_NOTES.md",
-        [
-            "",
-            "## Table 10. External 4-batch validation",
-            "This table pools four independent external batch2-style captures. It should be used to support the claim that the rewritten UG is not relying on a single external batch.",
-            "",
-            "## Table 11. Strong noisy-label baselines",
-            "This table adds GCE, SCE, Bootstrap-CE, and ELR on top of the previous supplemental baseline family. It is primarily for rebuttal and reviewer concerns about stronger noisy-label competitors.",
-            "",
-            "## Table 12. Operating-point analysis",
-            "This table reports ROC/PR-derived deployment metrics such as FPR@95%Recall and Recall@1/5/10%FPR. Use it to strengthen the practical interpretation of the FPR claim.",
-            "",
-            "## Table 13. Hard / camouflaged protocols",
-            "This table summarizes overlap-hardened and camouflaged protocol variants. It should be framed as a stress-test supplement rather than the main headline table.",
-            "",
-            "## Table 14. Stress sweeps",
-            "This table reports pooled trends under increasing weak-label noise and weak-label coverage loss. It is most useful for appendix placement and reviewer-facing robustness discussion.",
-        ],
-    )
 
 
 def main() -> None:

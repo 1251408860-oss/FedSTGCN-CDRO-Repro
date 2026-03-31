@@ -27,6 +27,6 @@ Reference documentation:
 - `Dockerfile.eval`
 - `../env/DL_env_export.yml`
 
-## Legacy Capture / Recharge Scripts
+## Legacy Recharge Scripts
 
-The older recharge and capture helpers are still preserved in this folder for project history and internal reuse, but the reviewer-facing paper reproduction path should use `run_review_artifact.sh`.
+Only the older recharge-oriented helpers are still preserved in this folder for project history and internal reuse. Private capture/repair helpers are intentionally omitted from the public artifact release; the reviewer-facing paper reproduction path should use `run_review_artifact.sh`.

@@ -14,7 +14,6 @@ The repository root is organized around the reviewer workflow:
 | `training/` | PI-GNN, CDRO, federated, and tabular training entry points |
 | `data_prep/` | weak-label generation and protocol-graph construction |
 | `pipelines/` | larger experiment orchestration scripts |
-| `tools/` | Mininet, traffic, and legacy attack-generation utilities |
 | `env/` | one preserved historical environment export from the original runs |
 | `docs/` | public-facing repository structure notes |
 

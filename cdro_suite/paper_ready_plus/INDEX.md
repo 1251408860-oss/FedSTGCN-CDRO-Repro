@@ -2,16 +2,8 @@
 
 - `MASTER_SUMMARY.md`: one-page summary of the safe claim, mechanism readout, and BlockSys-facing positioning.
 - `SAFE_CLAIMS_AND_LIMITATIONS.md`: writing-safe claim boundaries, banned wording, and limitations text.
-- `PAPER_WRITING_DRAFT.md`: direct manuscript draft for abstract, contributions, section wording, and result narration.
-- `FULL_PAPER_DRAFT.md`: single-file full paper draft assembled from the current writing materials.
 - `APPENDIX_REPRODUCIBILITY_TEXT.md`: ready-to-insert appendix text for artifact and replay disclosure.
-- `MANUSCRIPT_FIGURE_TABLE_PLAN.md`: final main-text vs appendix display map and manuscript numbering plan.
 - `CONTRIBUTION_EVIDENCE_MAP.md`: reviewer-facing map from each contribution claim to concrete evidence.
-- `SUBMISSION_COVER_LETTER.md`: submission letter draft aligned with the scoped final claim.
-- `BLOCKSYS_PRE_SUBMISSION_CHECKLIST.md`: final wording, numbering, and consistency checklist for the BlockSys version.
-- `CHINESE_ABSTRACT_AND_CONTRIBUTIONS.md`: Chinese abstract, contribution bullets, and Chinese result summary.
-- `FIGURE_CAPTIONS.md`: manuscript-ready captions plus main-text / appendix placement guidance.
-- `TABLE_NOTES.md`: table captions, interpretation notes, and final placement guidance.
 
 Main-text assembly assets:
 - `fig_method_overview.svg`
@@ -71,5 +63,4 @@ Supplemental assets:
 - `fig10_analyst_case_studies.png`
 - `analyst_case_studies.md`
 - `reproducibility_package.md`
-- `LOW_COST_EXTERNAL_EXTENSION_PLAN.md`
 - `../repro_package_v1/README.md`
