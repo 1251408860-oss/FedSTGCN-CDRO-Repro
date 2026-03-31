@@ -310,8 +310,7 @@ def build_core_table(repo_root: Path, main_summary_path: Path, external_summary_
 
 
 def build_maintext_deploy(table18_csv: Path, output_csv: Path) -> None:
-    with table18_csv.open("r", encoding="utf-8", newline="") as f:
-        rows = list(csv.DictReader(f))
+    rows = list(csv.DictReader(read_text_auto(table18_csv).splitlines()))
     out = [[
         "method",
         "method_label",
