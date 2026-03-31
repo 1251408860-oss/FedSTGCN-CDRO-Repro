@@ -21,8 +21,7 @@ This repository is split into a small reviewer-facing surface and a larger prese
 
 ## Supporting material
 
-- `env/`: original exported environments and package lists.
-- `docs/internal/`: internal reports and positioning notes kept for traceability.
+- `env/`: one preserved historical conda export from the original runs.
 - `biblio_us17/`: public benchmark assets retained with the repo.
 
 If you only need to validate the paper artifact, start with `repro/run_review_artifact.sh` and ignore the rest.

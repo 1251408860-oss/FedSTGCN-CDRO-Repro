@@ -15,8 +15,8 @@ The repository root is organized around the reviewer workflow:
 | `data_prep/` | weak-label generation and protocol-graph construction |
 | `pipelines/` | larger experiment orchestration scripts |
 | `tools/` | Mininet, traffic, and legacy attack-generation utilities |
-| `env/` | exported environment snapshots from the original runs |
-| `docs/internal/` | internal project reports and positioning notes not needed for review |
+| `env/` | one preserved historical environment export from the original runs |
+| `docs/` | public-facing repository structure notes |
 
 Key reviewer assets:
 
@@ -34,7 +34,7 @@ Key reviewer assets:
 
 The reviewer-facing path is intentionally narrow: start from `repro/run_review_artifact.sh`, then inspect `review_artifact/*` outputs if needed. Most other directories are preserved for traceability and internal reuse.
 
-The intended environment is the same PyTorch/PyG environment used in the original experiments. The repository keeps both the reviewer lockfiles in `repro/` and the original environment exports in `env/`; in local verification the replay command was executed with `PYTHON_BIN=/home/user/miniconda3/envs/DL/bin/python` on Ubuntu/WSL.
+The intended environment is the same PyTorch/PyG environment used in the original experiments. The repository keeps reviewer lockfiles in `repro/` and one preserved historical export in `env/DL_env_export.yml`; in local verification the replay command was executed with `PYTHON_BIN=/home/user/miniconda3/envs/DL/bin/python` on Ubuntu/WSL.
 
 The full reviewer replay is:
 

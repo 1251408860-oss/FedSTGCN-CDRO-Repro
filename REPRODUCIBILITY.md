@@ -2,7 +2,7 @@
 
 This document defines the reviewer-facing replay contract for the released `CDRO-UG` artifact. The official review path starts from released processed artifacts rather than private raw-capture regeneration.
 
-Use the same environment family as the original experiments. The primary environment files are `repro/environment-lock-dl.yml`, `repro/requirements-lock-dl.txt`, `env/DL_env_export.yml`, and `env/DL_pip_freeze.txt`; the local release check used `PYTHON_BIN=/home/user/miniconda3/envs/DL/bin/python`.
+Use the same environment family as the original experiments. The primary environment files are `repro/environment-lock-dl.yml`, `repro/requirements-lock-dl.txt`, and `env/DL_env_export.yml`; the local release check used `PYTHON_BIN=/home/user/miniconda3/envs/DL/bin/python`.
 
 The full replay command is:
 
