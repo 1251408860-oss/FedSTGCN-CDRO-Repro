@@ -116,8 +116,10 @@ def repo_rel(repo_root: Path, path: Path) -> str:
 
 
 def ensure_imports(repo_root: Path):
-    if str(repo_root) not in sys.path:
-        sys.path.insert(0, str(repo_root))
+    analysis_dir = repo_root / "analysis"
+    for path in (repo_root, analysis_dir):
+        if str(path) not in sys.path:
+            sys.path.insert(0, str(path))
     from make_cdro_paper_ready import aggregate_cdro_summary, find_comparison, plot_pooled_results, METHOD_LABELS
     return aggregate_cdro_summary, find_comparison, plot_pooled_results, METHOD_LABELS
 
@@ -157,7 +159,7 @@ def rebind_summary(repo_root: Path, source_summary_path: Path, output_dir: Path,
     subprocess.run(
         [
             python_bin,
-            "run_cdro_significance.py",
+            "analysis/run_cdro_significance.py",
             "--summary-json",
             repo_rel(repo_root, summary_path),
             "--output-json",
@@ -176,7 +178,7 @@ def rebind_summary(repo_root: Path, source_summary_path: Path, output_dir: Path,
 def build_train_cmd(repo_root: Path, python_bin: str, graph_rel: str, out_run_dir: Path, result_cfg: dict[str, Any], suite_cfg: dict[str, Any]) -> list[str]:
     cmd = [
         python_bin,
-        "pi_gnn_train_cdro.py",
+        "training/pi_gnn_train_cdro.py",
         "--graph-file",
         graph_rel,
         "--model-file",
@@ -254,7 +256,7 @@ def replay_suite(repo_root: Path, source_summary_path: Path, output_dir: Path, p
     subprocess.run(
         [
             python_bin,
-            "run_cdro_significance.py",
+            "analysis/run_cdro_significance.py",
             "--summary-json",
             repo_rel(repo_root, summary_path),
             "--output-json",
@@ -394,7 +396,7 @@ def main() -> None:
     subprocess.run(
         [
             args.python_bin,
-            "make_deployment_artifacts.py",
+            "analysis/make_deployment_artifacts.py",
             "--main-summary",
             repo_rel(repo_root, main_summary),
             "--external-summary",

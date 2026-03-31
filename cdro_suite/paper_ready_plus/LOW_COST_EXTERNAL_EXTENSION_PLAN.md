@@ -17,7 +17,7 @@ Safe manuscript reading:
 
 A real low-cost deployment rerun was already executed on `batch2_k_baselineplus_s3_v1` with:
 
-`wsl -d Ubuntu2 bash -lc 'export PYTHONPATH=/home/user/FedSTGCN; /home/user/miniconda3/envs/DL/bin/python /home/user/FedSTGCN/make_deployment_artifacts.py --main-summary /home/user/FedSTGCN/cdro_suite/main_baselineplus_s3_v1/cdro_summary.json --external-summary /home/user/FedSTGCN/cdro_suite/batch2_k_baselineplus_s3_v1/cdro_summary.json --output-dir /home/user/FedSTGCN/cdro_suite/deployment_checks_k_s3_v1 --paper-dir /home/user/FedSTGCN/cdro_suite/deployment_checks_k_s3_v1'`
+`wsl -d Ubuntu2 bash -lc 'export PYTHONPATH=/home/user/FedSTGCN; /home/user/miniconda3/envs/DL/bin/python /home/user/FedSTGCN/analysis/make_deployment_artifacts.py --main-summary /home/user/FedSTGCN/cdro_suite/main_baselineplus_s3_v1/cdro_summary.json --external-summary /home/user/FedSTGCN/cdro_suite/batch2_k_baselineplus_s3_v1/cdro_summary.json --output-dir /home/user/FedSTGCN/cdro_suite/deployment_checks_k_s3_v1 --paper-dir /home/user/FedSTGCN/cdro_suite/deployment_checks_k_s3_v1'`
 
 Output directory:
 

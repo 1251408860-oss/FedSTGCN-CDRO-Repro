@@ -18,7 +18,7 @@ if [[ -d "$ROOT_DIR/top_conf_suite_batch2" && ! -d "$ROOT_DIR/top_conf_suite_bat
 fi
 
 echo "[RUN] rerunning top_conf_suite_batch2"
-"$PY_BIN" run_top_conference_suite.py \
+"$PY_BIN" pipelines/run_top_conference_suite.py \
   --project-dir "$ROOT_DIR" \
   --python-bin "$PY_BIN" \
   --output-dir "$ROOT_DIR/top_conf_suite_batch2" \
@@ -29,36 +29,36 @@ echo "[RUN] rerunning top_conf_suite_batch2"
   --scenario-two-tier "scenario_k_two_tier_high_b2"
 
 echo "[RUN] batch2 baseline significance"
-"$PY_BIN" run_baseline_significance.py \
+"$PY_BIN" analysis/run_baseline_significance.py \
   --python-bin "$PY_BIN" \
   --suite-dir "$ROOT_DIR/top_conf_suite_batch2" \
   --seeds "11,22,33"
 
 echo "[RUN] batch2 federated cross-protocol significance"
-"$PY_BIN" run_fed_cross_protocol_significance.py \
+"$PY_BIN" analysis/run_fed_cross_protocol_significance.py \
   --python-bin "$PY_BIN" \
   --suite-dir "$ROOT_DIR/top_conf_suite_batch2" \
   --seeds "11,22,33"
 
 echo "[RUN] batch2 federated extended significance"
-"$PY_BIN" run_fed_significance_ext_final.py \
+"$PY_BIN" analysis/run_fed_significance_ext_final.py \
   --python-bin "$PY_BIN" \
   --suite-dir "$ROOT_DIR/top_conf_suite_batch2" \
   --seeds "11,22,33"
 
 echo "[RUN] batch2 paper tables/figures"
-"$PY_BIN" make_paper_tables_figs.py --suite-dir "$ROOT_DIR/top_conf_suite_batch2"
+"$PY_BIN" analysis/make_paper_tables_figs.py --suite-dir "$ROOT_DIR/top_conf_suite_batch2"
 
 echo "[RUN] supplemental classic robust baselines"
-"$PY_BIN" run_fed_classic_robust_baselines.py --suite-dir "$ROOT_DIR/top_conf_suite_recharge"
+"$PY_BIN" pipelines/run_fed_classic_robust_baselines.py --suite-dir "$ROOT_DIR/top_conf_suite_recharge"
 
 echo "[RUN] multiple testing corrections"
-"$PY_BIN" compute_multiple_testing_corrections.py
+"$PY_BIN" analysis/compute_multiple_testing_corrections.py
 
 echo "[RUN] runtime cost summary"
-"$PY_BIN" summarize_runtime_costs.py --suite-dir "$ROOT_DIR/top_conf_suite_recharge"
+"$PY_BIN" analysis/summarize_runtime_costs.py --suite-dir "$ROOT_DIR/top_conf_suite_recharge"
 
 echo "[RUN] refresh recharge master summary"
-"$PY_BIN" compile_recharge_master_summary.py
+"$PY_BIN" analysis/compile_recharge_master_summary.py
 
 echo "[DONE] post-recharge pipeline complete"

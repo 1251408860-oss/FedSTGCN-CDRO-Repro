@@ -25,6 +25,9 @@ Reference documentation:
 - `requirements-lock-dl.txt`
 - `requirements-lock-plot.txt`
 - `Dockerfile.eval`
+- `../env/DL_env_export.yml`
+- `../env/DL_pip_freeze.txt`
+- `../env/DL_conda_list.txt`
 
 ## Legacy Capture / Recharge Scripts
 

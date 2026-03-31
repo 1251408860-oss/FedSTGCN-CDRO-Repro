@@ -19,7 +19,7 @@ run() {
 
 cd "$ROOT_DIR"
 
-run "$PY_BIN" run_top_conference_suite.py \
+run "$PY_BIN" pipelines/run_top_conference_suite.py \
   --project-dir "$ROOT_DIR" \
   --python-bin "$PY_BIN" \
   --output-dir "$OUT_DIR" \
@@ -29,33 +29,33 @@ run "$PY_BIN" run_top_conference_suite.py \
   --scenario-high "$SCENARIO_HIGH" \
   --scenario-two-tier "$SCENARIO_TWO_TIER"
 
-run "$PY_BIN" run_baseline_significance.py \
+run "$PY_BIN" analysis/run_baseline_significance.py \
   --python-bin "$PY_BIN" \
   --suite-dir "$OUT_DIR" \
   --seeds "$SEEDS_STAGE3"
 
-run "$PY_BIN" run_fed_significance_ext_final.py \
+run "$PY_BIN" analysis/run_fed_significance_ext_final.py \
   --python-bin "$PY_BIN" \
   --suite-dir "$OUT_DIR" \
   --seeds "$SEEDS_FED9"
 
-run "$PY_BIN" run_fed_cross_protocol_significance.py \
+run "$PY_BIN" analysis/run_fed_cross_protocol_significance.py \
   --python-bin "$PY_BIN" \
   --suite-dir "$OUT_DIR" \
   --seeds "$SEEDS_STAGE3"
 
-run "$PY_BIN" make_paper_tables_figs.py --suite-dir "$OUT_DIR"
+run "$PY_BIN" analysis/make_paper_tables_figs.py --suite-dir "$OUT_DIR"
 
-run "$PY_BIN" run_central_congestion_family.py \
+run "$PY_BIN" pipelines/run_central_congestion_family.py \
   --project-dir "$ROOT_DIR" \
   --python-bin "$PY_BIN" \
   --output-dir "$ROOT_DIR/central_congestion_family_recharge"
 
-run "$PY_BIN" run_mechanism_ablation_recharge.py
+run "$PY_BIN" pipelines/run_mechanism_ablation_recharge.py
 
-run "$PY_BIN" compute_multiple_testing_corrections.py
-run "$PY_BIN" summarize_runtime_costs.py --suite-dir "$OUT_DIR"
-run "$PY_BIN" compile_recharge_master_summary.py
+run "$PY_BIN" analysis/compute_multiple_testing_corrections.py
+run "$PY_BIN" analysis/summarize_runtime_costs.py --suite-dir "$OUT_DIR"
+run "$PY_BIN" analysis/compile_recharge_master_summary.py
 
 echo "[DONE] main suite: $OUT_DIR"
 echo "[DONE] paper package: $OUT_DIR/paper_ready_plus"

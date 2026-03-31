@@ -2,6 +2,24 @@
 
 This repository is the reviewer-facing reproducibility release for the `CDRO-UG` conditional-shift experiments built on the FedSTGCN codebase. The official review path starts from released processed artifacts rather than private raw-capture regeneration. For the paper-aligned `main` and `external-J` suites, the released replay pipeline has already been validated locally on March 26, 2026, with `runs_compared = 96`, `core_table_exact_match = true`, `deployment_table_exact_match = true`, `max_metric_delta = 0.0`, and `max_threshold_delta = 0.0`.
 
+## Repository Layout
+
+The repository root is organized around the reviewer workflow:
+
+| Path | Role in the release |
+| --- | --- |
+| `repro/` | reviewer entry points, lockfiles, and replay helpers |
+| `cdro_suite/` | released suites, paper-ready references, and lightweight artifact bundles |
+| `analysis/` | significance scripts, paper table/figure builders, and artifact assembly |
+| `training/` | PI-GNN, CDRO, federated, and tabular training entry points |
+| `data_prep/` | weak-label generation and protocol-graph construction |
+| `pipelines/` | larger experiment orchestration scripts |
+| `tools/` | Mininet, traffic, and legacy attack-generation utilities |
+| `env/` | exported environment snapshots from the original runs |
+| `docs/internal/` | internal project reports and positioning notes not needed for review |
+
+Key reviewer assets:
+
 | Path | Role in the release |
 | --- | --- |
 | `repro/run_review_artifact.sh` | one-command reviewer entry point |
@@ -14,7 +32,9 @@ This repository is the reviewer-facing reproducibility release for the `CDRO-UG`
 | `cdro_suite/batch2_baselineplus_s3_v1/` | supplementary baselineplus external suite |
 | `cdro_suite/repro_package_v1/` | lightweight schema and manifest package |
 
-The intended environment is the same PyTorch/PyG environment used in the original experiments. The repository keeps both the conda export and lock-style requirements files at `repro/environment-lock-dl.yml` and `repro/requirements-lock-dl.txt`; in local verification the replay command was executed with `PYTHON_BIN=/home/user/miniconda3/envs/DL/bin/python`.
+The reviewer-facing path is intentionally narrow: start from `repro/run_review_artifact.sh`, then inspect `review_artifact/*` outputs if needed. Most other directories are preserved for traceability and internal reuse.
+
+The intended environment is the same PyTorch/PyG environment used in the original experiments. The repository keeps both the reviewer lockfiles in `repro/` and the original environment exports in `env/`; in local verification the replay command was executed with `PYTHON_BIN=/home/user/miniconda3/envs/DL/bin/python` on Ubuntu/WSL.
 
 The full reviewer replay is:
 
